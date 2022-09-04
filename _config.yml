@@ -1,9 +1,9 @@
-title: Cayman Blog Theme
-description: Cayman Blog Theme is a clean, responsive blogging theme for Jekyll and Gitlab/GitHub Pages.
-show_downloads: true
+title: Network undertaker
+description: About tech, life, and death, or something completely different.
+show_downloads: false
 
-baseurl: "/cayman-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "https://lorepirri.github.io" # change this to the base hostname & protocol for your site
+baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+url: "https://networkundertaker.com" # change this to the base hostname & protocol for your site
 
 
 google_analytics:
@@ -16,10 +16,10 @@ cayman-blog:
 theme: # leave it empty
 
 # social
-author: lorepirri
+author: "Rickard Andrinsson"
 image: /thumbnail-jumbo.png
 twitter:
-  username: lorepirri
+  username: Zwonko
 
 plugins:
   - jekyll-target-blank
