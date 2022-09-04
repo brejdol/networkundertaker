@@ -7,7 +7,8 @@ ref: about
 order: 0
 ---
 
-I route, I switch, I overlay. Therefore I am. 50-ish father, husband, former musician and teacher that now dabbles now in tech. Very tall. Usually cheerful.
+__I route, I switch, I overlay. Therefore I am.__ 
+50-ish father, husband, former musician and teacher that now dabbles now in tech. Very tall. Usually cheerful.
 
 
 [Go to the Home Page]({{ '/' | absolute_url }})
