@@ -1,11 +1,8 @@
 ---
 layout: page
 title: Contact
-tagline: Create a contact form and you are good to go
+tagline: Feel free to hook up with me at Linkedin. Or drop me a mail. I use the mailservice that starts with a G, and the address constitutes of my full name with a dot between my name and surname. Try to decipher that now bots!
 ref: contact
 order: 1
 ---
-
-Jekyll is a great tool to create static sites but with static site, there's no backend to send your data to: that is why you need a third party service.
-
 [Go to the Home Page]({{ '/' | absolute_url }})
