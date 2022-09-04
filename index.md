@@ -8,4 +8,4 @@
 layout: home
 ---
 
-_Ramblings, musings, or straight up lies._
+_Now, where did I put that Github?_
