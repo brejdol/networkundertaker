@@ -14,3 +14,22 @@ If I wanted to use something temporarily, that still meant installing a vm. VmWa
 
 **In walked Qubes**
 
+**[Qubes](https://qubes-os.org)** turns your pc/laptop into a Xen virtualization host. Inside of it, you will run qubes, where each qube is a compartmentalized mini-vm derived from a template based on Debian or Fedora, or a full blown vm, created to your specs and needs.
+
+The qubes comes in different types:
+
+> AppVM
+
+Has a persistent home, but volatile root. So everything except from your /home will be lost at shutdown/reboot. Based on a template VM, so if you want to install programs, you boot your template and install the apps, then shut it down. To get the new app in the qubes based on that template, just shut them down and start them again.
+
+> TemplateVM
+
+Is the other way around - Volatile home, persistent root. Here you can install the specific apps you want to use. You can create as many templates as you need. So you might want a "desktop-template", witch word processing, different browsers, slack and every day apps etc. Then you'll have specific needs for your work side Qubes - Maybe tools for coding - VisualStudio, git etc. Who knows, maybe a "media-template", with video players, Spotify app etc.
+
+> StandaloneVM
+
+A "standard" full virtual machine. In my case, this is the Windows 10 vm with Office, Visio, and specific VPN-clients.
+
+> DisposableVM
+
+Everything is volatile. When you shut a qube based on a DisposableVM, it is overwritten with the template. What happen in Vegas stays in Vegas!
