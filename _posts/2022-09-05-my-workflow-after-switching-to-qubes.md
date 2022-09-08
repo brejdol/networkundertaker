@@ -74,6 +74,8 @@ Qubes is very secure in comparison to any other desktop operating system. All Qu
 
 Qubes is pretty hard-core, demands quite a bit of Linux sysadmin knowledge, and may not be for the faint-hearted. The reward is that you get a very secure base operating system that is highly configurable and adaptable. It has been very stable, updates are frequent, and its user base is growing (wich for an Operating System is a good thing...). On a regular day, I have Hamsket running in my work Qube (blue window border), configured with my work collaborations (Slack, teams, mails), and another Hamsket running in my personal Qube (Yellow window border), configured with my personal collaborations (Slack, mail, discord etc). A work browser, and a personal browser, and a Windows10 vm running on the other screen. And maybe the blogging-Qube running too (green window borders), with Visual Studio and git.
 
+![Hug computer](/hug-computer.jpg)
+
 I went straight from my old setup to this on my primary work computer, and I haven't looked back once.
 Well, maybe once, when I found out that I forgot to copy my .ssh folder with all the keys... :-)
 But that is, as they say, another story...
