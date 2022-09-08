@@ -16,7 +16,7 @@ If I wanted to use something temporarily, that still meant installing a vm. VmWa
 
 **In walked Qubes**
 
-**[Qubes](https://qubes-os.org)** turns your pc/laptop into a Xen virtualization host. Inside of it, you will run qubes, where each qube is a compartmentalized mini-vm derived from a template based on Debian or Fedora, or a full blown vm, created to your specs and needs.
+**[Qubes](https://qubes-os.org)** turns your pc/laptop into a Xen-based virtualization host. Inside of it, you will run qubes, where each qube is a compartmentalized mini-vm derived from a template based on Debian or Fedora, or a full blown vm, created to your specs and needs.
 
 ![Qubes OS](/qubes.png)
 
