@@ -24,9 +24,10 @@ In a society where nothing what we take for 100% granted works, people are smili
 Knowing what you can change, and what you can not really helps. 
 
 > _If you have a problem, and you can solve it - Why worry?_  
+>
 > _If you have a problem, and you can't solve it - Why worry when it is impossible to solve?_  
-
-"The bus never came by. But I bet it will be here tomorrow!"  
+>
+> "The bus never came by. But I bet it will be here tomorrow!"  
 
 And that about sums it up.  
 
