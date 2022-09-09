@@ -31,6 +31,8 @@ Knowing what you can change, and what you can not really helps.
 
 And that about sums it up.  
 
+Many things will come and go, some will fail, some will work. You can only do your own work as good as you can, not answer for what everybody else do.
+
 You are a cog in a huge machinery.  
 
 Be a happy cog.  
