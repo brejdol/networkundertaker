@@ -9,6 +9,7 @@ order: 0
 
 __I route, I switch, I overlay, I proxy, I SNAT, I IPv6__
 
+__I lead teams and sometimes I teach__
 
 __Therefore I am__
 
