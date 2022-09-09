@@ -31,7 +31,10 @@ Knowing what you can change, and what you can not really helps.
 
 And that about sums it up.  
 
-Many things will come and go, some will fail, some will work. You can only do your own work as good as you can, not answer for what everybody else do.
+Many things will come and go, some will fail, some will work. You can only do your own work as good as you can, not answer for what everybody else do. Use your time. Time will end.  
+
+> People are strange: They are constantly angered by trivial things, but on a major matter like totally wasting their lives, 
+> they hardly seem to notice. -_Charles Bukowski_   
 
 You are a cog in a huge machinery.  
 
