@@ -3,7 +3,7 @@
 ![Sweaty guy](/sweat.jpg)
 
 So, the heat is on. The time you have prepared for is here. Now it all's gotta be done. But you can't, because... reasons...
-The server guys got food poisoning on that vendor thingie. The loadbalancer girl stumbled on a VIP and broke her hip.
+The server guys got food poisoning on that vendor thingie. The loadbalancer girl stumbled on a VIP and broke her hip. Ouch!
 The project manager overdosed on Visio and is in rehab somewhere. 
 
 However, you are still here. Wich is bad, because now you get questions about stuff you haven't heard of, never logged into, and has nothing to do with what you are hired for. And you never got those Visios that sent the project manager into oblivion either.
