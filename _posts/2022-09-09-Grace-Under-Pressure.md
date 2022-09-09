@@ -1,3 +1,5 @@
+** Projects**
+
 ![Sweaty guy](/sweat.jpg)
 
 So, the heat is on. The time you have prepared for is here. Now it all's gotta be done. But you can't, because... reasons...
