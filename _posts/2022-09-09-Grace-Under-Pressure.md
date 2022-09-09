@@ -1,4 +1,4 @@
-**Projects**
+**What is this thing called "Projects"?**
 
 ![Sweaty guy](/sweat.jpg)
 
