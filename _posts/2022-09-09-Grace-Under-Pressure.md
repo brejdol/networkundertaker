@@ -8,7 +8,7 @@ The project manager overdosed on Visio and is in rehab somewhere.
 
 However, you are still here. Wich is bad, because now you get questions about stuff you haven't heard of, never logged into, and has nothing to do with what you are hired for. And you never got those Visios that sent the project manager into oblivion either.
 
-But. You know this phase. You know that you are just a tiny cog in a pretty elaborate machinery. You have seen worse. That monk who torched himself back in the day was just a mid-level project manager in your office who got ordered to implement ITIL.
+But. You know this phase. You know that you are just a tiny cog in a pretty elaborate machinery. You have seen worse. That guy who torched himself with kerosine in the cafeteria a few months back was just a mid-level project manager in your office who got ordered to implement ITIL.
 
 You know all the current kerfuffle could have been avoided. But it never is. Project was too big. It outgrew the organization. It turned into an entity of it own, always evading, always moving into the shadows the second before you would have grasped it as a whole. 
 
