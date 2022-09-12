@@ -41,4 +41,6 @@ You are a cog in a huge machinery.
 Be a happy cog.  
 
 
-![Cog](/cog.jpg)
+![Cog](/cog.jpg)  
+
+[Go to the Home Page]({{ '/' | absolute_url }})

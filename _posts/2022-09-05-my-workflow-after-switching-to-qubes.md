@@ -80,5 +80,7 @@ I guess Qubes can be seen as pretty hard-core. It demands quite a bit of Linux a
 
 I went straight from my old setup to this on my primary work computer, and I haven't looked back once.
 Well, maybe once, when I found out that I forgot to copy my .ssh folder with all the keys... :-)
-But that is, as they say, another story...
+But that is, as they say, another story...  
+
+[Go to the Home Page]({{ '/' | absolute_url }})
 
