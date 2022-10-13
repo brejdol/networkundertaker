@@ -1,8 +1,8 @@
-**"You need to be here on monday at 08:00 AM. Can you make it?"**
+**Part 1**
+
+*"You need to be here on monday at 08:00 AM. Can you make it?"*
 
 (This all happened way back, in the mid 2010s. It is still one of the weirder missions I've been on as a consultant.)
-
-**PART 1**
 
 My collegue got a surprise call late on a friday evening. The caller was obviously in a state of desperation, since the call started with deep sigh, then silence. Eventually, the caller explained who he was, and why he called:
 
