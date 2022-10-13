@@ -12,9 +12,11 @@ My collegue had already started a chat with me on his computer during the call. 
 
 **Let's rock!**
 
+
 ![flight](/flight.jpg)
 
-We arrived to the site in good time on monday morning, after spending most of the the sunday night in the air. It turned out no one had a clue who we were, who ordered us there, or what work we were supposed to do, but that didn't matter, because we weren't allowed to enter the site without passing the security and compliance test anyway. We were lucky though, we were told a security training class was being held at 09:00 in the central office a few blocks away. Perfect! Well, perfect might not be the right word. The educator couldn't really speak english. At all. And the training class was supposed to be in english for obvious reasons. We were 15 or so in the class, and and several continents was represented: Australia, USA, India, Spain etc. People from all over the world. Regardless of the incomprehensable english spoken, we did understand from the slides shown that we had to wear a hard-hat at all times. And a reflective vest. And protective footwear. Same slides over and over, depicting men in hard-hats. With reflective vests. And protective footwear. That went on until lunch. 
+
+We arrived to the site in good time on monday morning, after spending most of the night in the air. It turned out no one had a clue who we were, who ordered us there, or what work we were supposed to do, but that didn't matter, because we weren't allowed to enter the site without passing the security and compliance test anyway. We were lucky though, we were told a security training class was being held at 09:00 in the central office a few blocks away. Perfect! Well, perfect might not be the right word. The educator couldn't really speak english. At all. And the training class was supposed to be in english for obvious reasons. We were 15 or so in the class, and and several continents was represented: Australia, USA, India, Spain etc. People from all over the world. Regardless of the incomprehensable english spoken, we did understand from the slides shown that we had to wear a hard-hat at all times. And a reflective vest. And protective footwear. Same slides over and over, depicting men in hard-hats. With reflective vests. And protective footwear. That went on until lunch. 
 
 After lunch, we started off with some repetition. In case we had forgotten about the importance of hard-hats, reflective vests, and protective footwear. The educator then moved on into chapter two: The things that can happen if you DON'T wear a hard-hat, a reflective vest, and protective footwear at all times... Dear lord. You might fall and hurt yourself!
 Anyway, it seemed they had implemented this three strike system when breaking the rules on site. After the first strike, they would call your manager. After the second, they would call your boss. After the third strike, you would be escorted off the premise, and never be working there again. Since we run our company together, we'd figured out quickly that we would be fine as long as we didn't get three strikes... We agreed on calling up eachother if we had to, and to yell insults loudly if needed for the audience. 
@@ -26,10 +28,10 @@ We decided to call it a day, check into the hotel, and to explore the local food
 
 Our hotel was a mere ten minute walk from the site, so we had an early breakfast and arrived at the site at 08:00. We didn't get in, because the guard didn't have any info about us, and noone he called knew we existed nor that any work on the network was supposed to be done. Once again, we headed for the central office in order to try to find someone that could give us some kind of clue to why we were called there. When we arrived, we were shown into a conference room. After a few minutes a clerk showed up and told us that we need to attend a security training class, and pass the test. We explained that we did that yesterday, showed our certificates of the completed training, and told him that we were networking engineers, called in for emergency work. The clerk glanced on our certificates, and told us that they weren't needed for the job we were there to do. My collegue and I looked at each other, then looked at the clerk. We had to ask: 
 
-> "What job are we here for, EXACTLY?"
-> "You are going to work on the core network, aren't you?"
-> "Well, maybe, we didn't get much info at all before."
-> "I will call a guy that can follow you on-site, the security training class you attended is for the construction workers only. You are going to be in the data center, it is not a hard-hat area any more."
+> "What job are we here for, EXACTLY?"  
+> "You are going to work on the core network, aren't you?"  
+> "Well, maybe, we didn't get much info at all before."  
+> "I will call a guy that can follow you on-site, the security training class you attended is for the construction workers only. You are going to be in the data center, it is not a hard-hat area any more."  
 
 A bit annoyed with all this confusion, we waited for the on-site guy outside the central office. At least the sun was shining, it was a nice day, early summer, warm. The guy arrived, looking like your typical carpenter or builder. He just laughed when we told him how we spent the last day. 
 
