@@ -35,11 +35,11 @@ Our hotel was a mere ten minute walk from the site, so we had an early breakfast
 
 A bit annoyed with all this confusion, we waited for the on-site guy outside the central office. At least the sun was shining, it was a nice day, early summer, warm. The guy arrived, looking like your typical carpenter or builder. He just laughed when we told him how we spent the last day. 
 
-"Well then gentlemen, I will take you to the data center".  
+>"Well then gentlemen, I will take you to the data center".  
 We walked to the site, got past the guards, walked over the railway yard to a big building out in nowhere - Just railway tracks all around it.  
-"So, what are you guys supposed to do here?" he asked.  
-"We don't know yet, exactly. I guess we'll have to call someone when we have checked the DC out. We are supposed to do some work on the network core" I replied.  
-"Network?" he said and gave us an odd look.  
+>"So, what are you guys supposed to do here?" he asked.  
+>"We don't know yet, exactly. I guess we'll have to call someone when we have checked the DC out. We are supposed to do some work on the network core" I replied.  
+>"Network?" he said and gave us an odd look.  
 We continued to walk up to the DC, in silence. He unlocked the door and let us in.  
 
 Inside there were complete darkness. He lit his flashlight.  
