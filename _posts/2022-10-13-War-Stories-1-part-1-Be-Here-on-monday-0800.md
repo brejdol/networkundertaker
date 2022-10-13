@@ -1,4 +1,4 @@
-*** "You need to be here on monday at 08:00 AM. Can you make it?" ***
+**"You need to be here on monday at 08:00 AM. Can you make it?"**
 
 (This all happened way back, in the mid 2010s. It is still one of the weirder missions I've been on as a consultant.)
 
