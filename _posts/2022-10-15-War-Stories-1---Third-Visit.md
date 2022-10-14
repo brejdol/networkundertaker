@@ -50,7 +50,7 @@ Almost like a flick of a switch, the tone in the call changed to normal voice. I
  
  Many talk and think derogatory about "Consultants" - Consultants cost a lot of money, and they don't deliver much. In this story, this is painfully true. I maybe worked 8h in total during the 6 days I was there. Was that my fault in any way?  
  
- >**Nope**.  
+ >**Nope**  
 
 
  ![Cog](/cog.jpg)  
