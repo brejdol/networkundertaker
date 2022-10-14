@@ -45,10 +45,9 @@ Almost like a flick of a switch, the tone in the call changed to normal voice. I
  ![Cog](/cog.jpg)  
 
 
- In this case, we were tiny cogs in a huge machinery (again, with the cogs...). The total budget for this entire project was several billions of dollar. Thousands of people involved. It is not an easy feat to make sure every resource is in the right place at the right time, all the time. But flying in network techs from another country when you should have called an industrial electrician to fix the mains is a mistake that can be easily avoided. Creating an IP-plan that isn't complete hogwash is also a good start if you are a network architect. In the end - This inefficiency on several levels must have costed huge amounts of money during this project's entire lifespan. Tax payer's money. As much as I like getting payed well, I really don't like being a part of something wasteful
+ In this case, we were tiny cogs in a huge machinery (again, with the cogs...). The total budget for this entire project was several billions of dollar. Thousands of people involved. It is not an easy feat to make sure every resource is in the right place at the right time, all the time. But flying in network techs from another country when you should have called an industrial electrician to fix the mains is a mistake that can be easily avoided. Creating an IP-plan that isn't complete hogwash is also a good start if you are a network architect. In the end - This inefficiency on several levels must have costed huge amounts of money during this project's entire lifespan. Tax payer's money. As much as I like getting payed well, I really don't like being a part of something so wasteful.
  
- This project learned me a lot about how different the work culture can be can be in different countries. I am used to a culture where you have a lot of freedom, within certain boundaries of course. Creativity is encouraged. You are trusted with solving things on your own if possible, without going too much "gung-ho". Besides that, I don't have a manager to call most days.
-
+ This project learned me a lot about how different the work culture can be can be in different countries. I am used to a culture where you have a lot of freedom, within certain boundaries of course. Creativity is encouraged. You are trusted with solving things on your own if possible, without going too much "gung-ho". Besides that, I don't have a manager to call for permission anyway, so...
 
 
 [Go to the Home Page]({{ '/' | absolute_url }})
