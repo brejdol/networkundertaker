@@ -52,6 +52,7 @@ Almost like a flick of a switch, the tone in the call changed to normal voice. I
  
  >**Nope**.  
 
+
  ![Cog](/cog.jpg)  
 
 
