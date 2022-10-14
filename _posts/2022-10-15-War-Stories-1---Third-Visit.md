@@ -38,7 +38,7 @@ We rushed to finish, and went back to the other consultants hotel room, called b
 
 Almost like a flick of a switch, the tone in the call changed to normal voice. I glanced at the other consultant. He stared out into nothing, eyes wide open, mouth wide open. His gasket was about to blow, and boy, did it blow:  
 
- "ARE YOU OUT OF YOUR F****NG MINDS? You have spent ten minutes yelling at us for fixing your core network wich was looping like craxy! Then you continued to yell at us for doing what we were called here to do - Setting up remote access. Then you have the nerve to ask if we are done so you can access?!"  
+ "ARE YOU OUT OF YOUR F****NG MINDS? You have spent ten minutes yelling at us for fixing your core network wich was looping like crazy! Then you continued to yell at us for doing what we were called here to do - Setting up remote access. Then you have the nerve to ask if we are done so you can access?!"  
 
  The yelling continued back and forth for a few minutes, but I kept quiet and more or less zoned out. Stared out the window. Usually, I also tend to get upset in these kinds of situations, but this one was too far off on a tangent for me to be bothered. I'm a tiny piece in this puzzle, no one on the other side of this phone have the slightest idea of who I am, and they don't care anyway. So why should I be upset with this? I have done my work, and I did it well.  
 
