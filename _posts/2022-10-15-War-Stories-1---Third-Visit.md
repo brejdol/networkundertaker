@@ -46,7 +46,9 @@ Almost like a flick of a switch, the tone in the call changed to normal voice. I
 
  **Epilogue**  
 
- This was my last visit to this place. I have no clue how anything went further on. Don't really care either. I delivered what I was hired for. It is a great story to tell to get a few laughs. People find it hilarious, and don't believe what they are hearing. Many talk and think derogatory about "Consultants" - Consultants cost a lot of money, and they don't deliver much. In this story, this is painfully true. I maybe worked 8h in total during the 6 days I was there. Was that my fault in any way? Nope.  
+ This was my last visit to this place. I have no clue how anything went further on. Don't really care either. I delivered what I was hired for. It is a great story to tell to get a few laughs. People find it hilarious, and don't believe what they are hearing.  
+ 
+ Many talk and think derogatory about "Consultants" - Consultants cost a lot of money, and they don't deliver much. In this story, this is painfully true. I maybe worked 8h in total during the 6 days I was there. Was that my fault in any way? Nope.  
 
  ![Cog](/cog.jpg)  
 
