@@ -1,4 +1,4 @@
-** Everything must end **
+**Everything must end**
 
 The last year has been busy, to say the least. Planning, designing, and executing all parts of a big network migration - From old stuff to new, from old design to new, from old thinking, to new... We'll get back to that thinking part. It turned out it is hard to leave the old thinking...
 
