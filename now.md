@@ -7,9 +7,6 @@ ref: now
 order: 2
 ---
 
-I have spent the last year preparing for a big network migration. We are now in the deploy phase where networks move almost every day. We're in mid october now, and we will carry on well into april 2023. Many, many VRFs, something like 6000 firewall rules. Everything eBGP. Everything is used 24/7 (yes, it is used while we move it!). Downtime is baad. SLAs are short (Like: Hefty fines after 15 minutes of downtime for some systems.)  
-Many teams working. Fun, but very easy to get lost in the sheer volume of things.  
-
-This project consumes well over full time itself, and I have a few other projects too. Like handling the global proxy/loadbalancer service for a company that has precence in  more than 120 countries. And sometimes help with troubleshooting other stuff there. Plus a few other customers. And I have a company to run. And a few certs that needs to be taken. The concept of "time" still puzzles me. Like, where did it go?
+Currently in the process of leaving the big network migration project I spent 15 months in. New projects are in the making. I will spend the upcoming months as an advisory network architect - Unusual for me, no hands-on at all this time. My main role is to solve snags along the way. Acting as a bridge between the different migration teams. In this case I see myself as a metaphorical bridge, that let's traffic flows without blocking, nor creating any loops...
 
 [Go to the Home Page]({{ '/' | absolute_url }})
