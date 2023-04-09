@@ -21,6 +21,6 @@ Shortest Path Bridging was created with co-existance with the legacy network env
 * When adding a path for SPB through a legacy environment, think of it as adding another point-to-point link. The legacy environment switches will be invisible to the SPB control plane - It is just a path included in the SPF algorithm math.
 
 IS-IS doesn't ride on top of IP like OSPF or BGP by the way. It has its own IP protocol: 124. So SPB is using the IS-IS control plane messaging, very much like how MP-BGP extensions is handling EVPN within the BGP protocol. 
-__In practice, an SPB node doesn't need any IP set for SPB to work.__ (Although some losers like mgmt interfaces).
+__In practice, an SPB node doesn't need any IP set for SPB to work.__ (Although some losers seems to like mgmt interfaces for some reason...).
 
 In part 2, we will set up the BVLANS, enable the SPB service, and add links, effectively creating the SPB backbone/underlay.
