@@ -50,7 +50,7 @@ He moved his flashlight, pointing at the wall. In the wall, there was a niche wh
 
 He gave us a flashlight tour around the building, and showed us the different DC rooms. Everything was there, core chassis were racked, connected, there was cooling units, raised floor, fire extinguisher in the ceiling. Racks upon racks filled with servers, SANs, interconnects, etc. It looked like a brand new data center. Except without any power.  
 
-That concluded our first visit to this site. Two days spent, no work done. More to come.
+That concluded our first visit to this site. Two days spent, no work done. More to come, since we had to go there a second time.
        
 [War Stories 1 - Second Visit](https://networkundertaker.com/2022/10/14/War-Stories-1-Second-Visit.html)
 
