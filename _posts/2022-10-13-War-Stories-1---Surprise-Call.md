@@ -52,4 +52,4 @@ He gave us a flashlight tour around the building, and showed us the different DC
 
 That concluded our first visit to this site. Two days spent, no work done. More to come.
 
-
+[Start page]({{ '/' | absolute_url }})            [War Stories 1 - Second Visit]({{ '/' | https://networkundertaker.com/2022/10/14/War-Stories-1-Second-Visit.html }})
