@@ -43,4 +43,4 @@ Be a happy cog.
 
 ![Cog](/cog.jpg)  
 
-[Go to the Home Page]({{ '/' | absolute_url }})
+[Start page]({{ '/' | absolute_url }})
