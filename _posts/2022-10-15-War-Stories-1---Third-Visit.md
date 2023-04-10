@@ -63,4 +63,4 @@ Almost like a flick of a switch, the tone in the call changed to normal voice. I
  This project learned me a lot about how different the work culture can be can be in different countries. I am used to a culture where you have a lot of freedom, within certain boundaries of course. Creativity is encouraged. You are trusted with solving things on your own if possible, without going too much "gung-ho". Besides that, I don't have a manager to call for permission anyway, so...
 
 
-[Go to the Home Page]({{ '/' | absolute_url }})
+[Start page]({{ '/' | absolute_url }})

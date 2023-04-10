@@ -51,5 +51,8 @@ The reply was angry: "You are to work according to the planning, it has been don
 
 The conference call guys asked for a few minutes of talking privately. They came back after a while:  
 "The IP-planning is a work in progress. More networks will be added later. You are to work according to the plan!".  
-The meeting ended, without the two of us understanding much more. We went to the DC and added the first station network. Then we were done, since no more work could be done. This concluded our second visit to the site. More to come!
+The meeting ended, without the two of us understanding much more. We went to the DC and added the first station network. Then we were done, since no more work could be done. This concluded our second visit to the site. And guess what? We had to go there a third time!
 
+[War Stories 1 - Third Visit](https://networkundertaker.com/2022/10/15/War-Stories-1-Third-Visit.html)
+
+[Start page]({{ '/' | absolute_url }})   
