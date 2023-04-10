@@ -82,5 +82,5 @@ I went straight from my old setup to this on my primary work computer, and I hav
 Well, maybe once, when I found out that I forgot to copy my .ssh folder with all the keys... :-)
 But that is, as they say, another story...  
 
-[Start page - networkundertaker.com]({{ '/' | absolute_url }})
+[Start page]({{ '/' | absolute_url }})
 
