@@ -55,4 +55,4 @@ The meeting ended, without the two of us understanding much more. We went to the
 
 [War Stories 1 - Third Visit](https://networkundertaker.com/2022/10/15/War-Stories-1-Third-Visit.html)
 
-[Start page]({{ '/' | absolute_url }})   
+[Start page]({{ '/' | absolute_url }})
