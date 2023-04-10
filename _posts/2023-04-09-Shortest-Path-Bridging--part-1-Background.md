@@ -25,6 +25,6 @@ __In practice, an SPB node doesn't need any IP set for SPB to work.__ (Although 
 
 In part 2, we will set up the BVLANS, enable the SPB service, and add links, effectively creating the SPB backbone/underlay.
 
-[Shortest Path Bridging Part 2 - Setting up the backbone](https://networkundertaker.com/2023/04/10/Shortest-Path-Bridging-part-2-Setting-up-the-backbone.html))
+[Shortest Path Bridging Part 2 - Setting up the backbone](https://networkundertaker.com/2023/04/10/Shortest-Path-Bridging-part-2-Setting-up-the-backbone.html)
 
 [Start page]({{ '/' | absolute_url }})
