@@ -18,7 +18,6 @@ Shortest Path Bridging was created with co-existance with the legacy network env
 * NOT SO JUMBO FRAMES. 1524 is what is needed due to the mac-in-mac PBB encapsulation. Might be a PITA to enable in some environments. Not in ALE (Alcatel-Lucent Enterprise), since everything is 9216 default.
 * In addition - Switches must be able to switch the mac-in-mac frames transparantly. All major vendor's switches after 2010 can do that.
 * It is best practice to disable STP on the BVLANS (Backbone VLANS) that pass through the legacy environment switches. The BVLANs in the SPB switches will drop all BPDUs anyway, and STP is default disabled on all BVLANs in SPB-enabled switches. The SPB control plance has to be in control of all paths included in the setup. A BVLAN also have its source-learning disabled. Yep. All src-learning is done at the edges, and is kept within the IS-IS control plane.
-* When adding a path for SPB through a legacy environment, think of it as adding another point-to-point link. The legacy environment switches will be invisible to the SPB control plane - It is just a path included in the SPF algorithm math.
 
 IS-IS doesn't ride on top of IP like OSPF or BGP by the way. It has its own IP protocol: 124. So SPB is using the IS-IS control plane messaging, very much like how MP-BGP extensions is handling the EVPN underlay within the BGP protocol. 
 __In practice, an SPB node doesn't need any IP set for SPB to work, even when providing L3 services to IP packets__ (Although some losers seems to like to have a management IP for some reason...).
