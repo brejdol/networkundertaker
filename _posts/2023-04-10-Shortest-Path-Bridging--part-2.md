@@ -42,6 +42,6 @@ This info makes sure that the control plane can do proper loadbalancing over the
 
 Now, it is time to setup a few services on our new shiny backbone. 
 
-[Shortest Path Bridging Part 3 - Creating Services - L2VPN](https://networkundertaker.com/2023/04/10/Shortest-Path-Bridging-part-3.html)
+[Shortest Path Bridging Part 3 - Creating Services - L2VPN](https://networkundertaker.com/2023/04/11/Shortest-Path-Bridging-part-3.html)
 
 [Start page]({{ '/' | absolute_url }})
