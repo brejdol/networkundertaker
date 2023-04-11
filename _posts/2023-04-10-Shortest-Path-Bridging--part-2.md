@@ -41,3 +41,7 @@ One thing to remember here is that SPB doesn't have any way of determining the s
 This info makes sure that the control plane can do proper loadbalancing over the links without saturating anything.
 
 Now, it is time to setup a few services on our new shiny backbone. 
+
+[Shortest Path Bridging Part 3 - Creating Services - L2VPN](https://networkundertaker.com/2023/04/10/Shortest-Path-Bridging-part-3.html)
+
+[Start page]({{ '/' | absolute_url }})
