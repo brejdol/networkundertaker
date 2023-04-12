@@ -37,7 +37,7 @@ A client use port mapping extensively (port isolation/private vlan) in their env
 In this setup, we will separate the routing (wich will be done as legacy "dummy" VLANs) and the SPB-domain. Check this out:
 
 ```
-vrf create guests
+vrf create srv
 vlan 110 name vlan-110-dummy
 vlan 111 name vlan-111-dummy
 vrf srv ip interface vlan-110-rtr address 172.19.35.1/24 vlan 110 rtr-port port 1/1/1 tagged
