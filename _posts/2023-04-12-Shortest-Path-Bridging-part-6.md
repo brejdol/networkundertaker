@@ -1,6 +1,6 @@
 **Routing continued - L3-services**
 
-                ![**L3 services**](/L3-service.png)
+                ![L3 service](/L3-service.png)
 
 In the above example, we have four different BEBs belonging to the same customer, each with a VRF containing a local user network where the default gateway is in the VRF. Each VRF also have a "WAN" interface each in the same subnet within a single SPB service that connects the four sites. Routing is only performed at ingress/egress VRFs, the traffic between the VRFs are bridged. On the WAN-side - Everything is a single L3 hop away regardless of how many L2 hops (BCB) there are in between.
 The routing between the different VRFs can be done in two ways.
