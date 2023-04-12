@@ -47,7 +47,7 @@ service spb 1 sap port 1/1/2:110
 service spb 2 sap port 1/1/2:111
 ```
 
-This creates a two-pass routing setup (traffic pass the switch 2 times), where we have the dummy VLANs 110 and 111 with IP interfaces in the VRF named "srv", and the interfaces maps to the SPB service 1 and 2. The rtr-port option turns off all L2 protocols, like STP etc. A loopback cable between port 1/1/1 and 1/1/2 bridges the services with the dummy VLANs. It is also possible (read: Best practice) to use a linkagg for this setup for redundancy.
+This creates a two-pass routing setup (traffic pass the router 2 times), where we have the dummy VLANs 110 and 111 with IP interfaces in the VRF named "srv", and the interfaces maps to the SPB service 1 and 2. The rtr-port option turns off all L2 protocols, like STP etc. A loopback cable between port 1/1/1 and 1/1/2 bridges the services with the dummy VLANs. It is also possible (read: Best practice) to use a linkagg for this setup for redundancy.
 
 Next up, we'll take a look on VRF-lite and L3VPNs.
 
