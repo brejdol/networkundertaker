@@ -40,14 +40,14 @@ In this setup, we will separate the routing (wich will be done as legacy "dummy"
 vrf create guests
 vlan 110 name vlan-110-dummy
 vlan 111 name vlan-111-dummy
-vrf guests ip interface vlan-110-rtr address 172.19.35.1/24 vlan 110 rtr-port port 1/1/1 tagged
-vrf guests ip interface vlan-111-rtr address 172.19.36.1/24 vlan 111 rtr-port port 1/1/1 tagged
+vrf srv ip interface vlan-110-rtr address 172.19.35.1/24 vlan 110 rtr-port port 1/1/1 tagged
+vrf srv ip interface vlan-111-rtr address 172.19.36.1/24 vlan 111 rtr-port port 1/1/1 tagged
 service access port 1/1/2
 service spb 1 sap port 1/1/2:110
 service spb 2 sap port 1/1/2:111
 ```
 
-This creates a two-pass routing setup (traffic pass the switch 2 times), where we have the dummy VLANs 110 and 111 with IP interfaces in the VRF named "guests", and the interfaces maps to the SPB service 1 and 2. The rtr-port option turns off all L2 protocols, like STP etc. A loopback cable between port 1/1/1 and 1/1/2 bridges the services with the dummy VLANs. It is also possible (read: Best practice) to use a linkagg for this setup for redundancy.
+This creates a two-pass routing setup (traffic pass the switch 2 times), where we have the dummy VLANs 110 and 111 with IP interfaces in the VRF named "srv", and the interfaces maps to the SPB service 1 and 2. The rtr-port option turns off all L2 protocols, like STP etc. A loopback cable between port 1/1/1 and 1/1/2 bridges the services with the dummy VLANs. It is also possible (read: Best practice) to use a linkagg for this setup for redundancy.
 
 Next up, we'll take a look on VRF-lite and L3VPNs.
 
