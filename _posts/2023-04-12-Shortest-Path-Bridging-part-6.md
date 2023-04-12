@@ -1,13 +1,13 @@
 **Routing continued - L3-services**
 
-                ![L3 service](/L3-service.png)
+                            ![L3 service](/L3-service.png)
 
 In the above example, we have four different BEBs belonging to the same customer, each with a VRF containing a local user network where the default gateway is in the VRF. Each VRF also have a "WAN" interface each in the same subnet within a single SPB service that connects the four sites. Routing is only performed at ingress/egress VRFs, the traffic between the VRFs are bridged. On the WAN-side - Everything is a single L3 hop away regardless of how many L2 hops (BCB) there are in between.
 The routing between the different VRFs can be done in two ways.
 
 **VPN Lite**
 
-A VPN Lite L3 service is created by overlaying a routing protocol on top of the SPB service that connects the VRFs. The routing protocol can be static, BGP, or OSPF. The routing protocol will be a specific instance for each VRF. This will work fine, since the SPB service that connects the VRFs is a directly connected network - OSPF for example, will work normally, finding the other neighbors, creating adjacencies etc. The backside of this is that you have to run a routing protocol, with the extra config, complexity, and CPU load this will carry with it. You can do it all in SPB instead.
+A VPN Lite L3 service is created by overlaying a routing protocol on top of the SPB service that connects the VRFs. The routing protocol can be static, BGP, or OSPF. The routing protocol will be a specific instance for each VRF. This will work fine, since the SPB service that connects the VRFs is a directly connected network - OSPF for example, will work normally, finding the other neighbors, create adjacencies etc. The backside of this is that you have to run a routing protocol, with the extra config, complexity, and CPU load this will carry with it. You can do it all in SPB instead.
 
 **L3 VPN**
 
