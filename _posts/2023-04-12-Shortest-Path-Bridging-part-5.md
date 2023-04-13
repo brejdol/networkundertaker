@@ -26,15 +26,15 @@ vrf usr ipv6 static-route ::/0 gateway 2001:db8:72:22::fe
 vrf usr ip static-route 0.0.0.0/0 gateway 172.72.22:254
 ```
 
-Bam! I created a VRF named "usr", added an IPv6/Ipv4 interface on service-1000, turned off router advertisments, enabled BFD, set a router-id, added a static route for IPv6/IPv4. OSPF, BGP, IS-IS, RIP, static routes, you name it. It works exactly the same as with a legacy VLAN. The traffic only need to pass the switch one time, this is why this is called **Single Pass Inline Routing**. 
+Bam! I created a VRF named "usr", added an IPv6/IPv4 interface on service-1000, turned off router advertisements, enabled BFD, set a router-id, added a static route for IPv6/IPv4. OSPF, BGP, IS-IS, RIP, static routes, you name it. It works exactly the same as with a legacy VLAN. The traffic only need to pass the switch one time, this is why this is called **Single Pass Inline Routing**. 
 
-You can also mix legacy VLANs and SPB services in the same vrf, and route between them seamlessly. However, there might be reasons to keep the routing part outside of SPB. You might have legacy routers that will perform the routing in wich case the SPB network only acts as a transparent transport. You might want to keep the transport network and the routing separate. Another reason might be because your are using specific functions that doesn't work if you route within SPB, infact, I have such a case right now: 
+You can also mix legacy VLANs and SPB services in the same vrf, and route between them seamlessly. However, there might be reasons to keep the routing part outside of SPB. You might have legacy routers that will perform the routing in which case the SPB network only acts as a transparent transport. You might want to keep the transport network and the routing separate. Another reason might be because your are using specific functions that doesn't work if you route within SPB, in fact, I have such a case right now: 
 
 A client use port mapping extensively (port isolation/private vlan) in their environment. They have large L2 domains kept in place by port mapping in their core out to their nodes, blocking lateral traffic on L2 between the nodes. It is a legacy setup, and maybe not up to par with how you would design things 2023, but nevertheless - The customer don't want to change this design, but still use SPB with all its features and redundancy. The problem is that port-mapping is impossible to do between SAP ports. Then you are either forced to start using ACLs very extensively in a way that doesn't really scale, or you have to move the routing part OUT of SPB. With a bit of trickery and a loopback cable, you can route VLANs the legacy way and use SPB at the same time.
 
 **Two-pass routing with external loopback**
 
-In this setup, we will separate the routing (wich will be done as legacy "dummy" VLANs) and the SPB-domain. Check this out:
+In this setup, we will separate the routing (which will be done as legacy "dummy" VLANs) and the SPB-domain. Check this out:
 
 ```
 vrf create srv
