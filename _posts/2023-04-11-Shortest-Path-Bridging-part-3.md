@@ -50,7 +50,7 @@ The big thing with a service is that you ONLY have to create it on the ingress/e
 
 So what happens when a link fails? Well, it's the same as always - A clean failure where a fiber is cut, an SFP dies, or a switch in the path loses power is easy to handle. SPB has very very fast convergence times, usually under 50 ms if your network isn't huge. As you add more nodes, the convergence time will be slower, but you need a sizable network to actually notice that. I would say you need to have way over 100 nodes to actually notice it. I only have access to smaller SPB meshes with around 20 nodes, and I can't really measure the outage if I pull a fiber, or pull the power on a switch in the path. It isn't really noticable, even if you are in a video call. With this said - Failures are often not that clean. An SFP can for example fail with a brown-out, not totally down, but working, then throwing errors and dropping traffic when warm etc etc. Those kinds of failures can still be messy. SPB is almost magic. Tragically enough, the ol' brown-outs still happen, even with SPB.
 
-Next is: More types of services. How about... Pseudo-wires?
+Next up: More types of services. How about... Pseudo-wires?
 
 [Shortest Path Bridging Part 4 - Creating Services - Pseudo-wires](https://networkundertaker.com/2023/04/12/Shortest-Path-Bridging-part-4.html)
 
