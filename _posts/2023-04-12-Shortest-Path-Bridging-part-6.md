@@ -33,3 +33,11 @@ spb ipvpn bind vrf Customer_A isid 3001 gateway 100.64.90.1 all-routes
 ```
 
 The above config first create a new service 3000 used for the LAN-network, and this is presented untagged on SAP port 1/1/51A. The second service 3001 is used as the internal SPB L3 VPN interface. The customer VRF is created. IP is set on the interfaces, all local routes in the VRF is exported, and all incoming routes via the L3 VPN on service 3001 is imported. The exit command takes you out of the VRF, and finally, we map the L3VPN service to the vrf and set the gateway to the IP of the L3VPN interface, and set that all-routes should be handled (a route-map within the VRF is where you should filter imported/exported routes). This is fairly straightforward and possible to grasp. The only thing I struggled with is that you set the gateway to your own L3VPN interface IP. But it is logical if you think about it. That IP IS the gw to all the other VRFs behind it.
+
+L3 VPN does use the onboard resources better, since everything rides on top of the running SPB IS-IS instance. Even if the amount of customers grow over time, it is still the same instance. If we compare this to instead running VPN Lite with a routing protocol in all VRFs instead, scale quickly becomes an issue. 4 customers spanning services in 8 BEBs require 4 OSPF instances per node. If dual stack is needed, we're at 64 OSPF configurations. Dual stack in SPB is still only one SPB IS-IS instance, since IS-IS doesn't depend on IP itself, and IP agnostic forwarding wise - __IPv4 or IPv6 doesn't matter.__ If your environment grows, this can make all the difference. IS-IS signalling is also very quick - convergence will be faster with only one protocol running. With all this said - L3 VPN is only possible within the SPB domain. All dynamic routing that is external must be handlet with the appropriate protocol in the BEB VRF.
+
+In the next chapter, we will stay on the L3 track -  Shared services and route leaking.
+
+[Shortest Path Bridging Part 7 - Routing Continued - Shared services and route leaking](https://networkundertaker.com/2023/04/12/Shortest-Path-Bridging-part-7.html)
+
+[Start page]({{ '/' | absolute_url }})
