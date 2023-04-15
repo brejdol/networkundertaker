@@ -32,17 +32,17 @@ Setting VLAN 4000-4001 as BVLANs automatically disables STP on them. AOS assigns
 
 **Caveats with different link speeds**
 
-One thing to remember here is that SPB doesn't have any way of determining the capacity of the links by itself. If you have the same link capacity in all directions as in the above example, this doesn't matter. BUT... If you have a few links on 100G, a few on 40G, maybe some 25G, and a bunch of 10G links, you NEED to configure the link metric properly. Default link metric is 10 on all links. Since all links are open and can/will be used, you need to provide this information to the control plance so that SPB never over-saturate a link. Set the link metric so that it is a factor of the link capacity, where your highest link capacity has the lowest value, for example: 
+One thing to remember here is that SPB doesn't have any way of determining the capacity of the links by itself. If you have the same link capacity in all directions as in the above example, this doesn't matter. BUT... If you have a few links on 100G, a few on 40G, maybe some 25G, and a bunch of 10G links, you NEED to configure the link metric properly. **Failing to do so can result in packet loss.** Default link metric is 10 on all links. Since all links are open and can/will be used, you need to provide this information to the control plance so that SPB never over-saturate a link. Set the link metric so that it is a factor of the link capacity, where your highest link capacity has the lowest value, for example: 
 
 ```
 400G links with metric 250
 100G links with metric 1000
-40G  links with metric 2500 (2,5 *40 is 100)
-25G  links with metric 4000 (4 * 25 is 100)
-10G  links with metric 10000 (10 * 10 is 100)
+40G  links with metric 2500
+25G  links with metric 4000
+10G  links with metric 10000
 ```
 
-This additional info makes sure that the control plane always can do proper loadbalancing over the links without saturating anything. Since ECMP comes into play when there are several paths with the same length between a source and a destination, this will work even if the paths include a 10G and a 100G interface due to this added information - Simply put: Weighted ECMP traffic distribution.
+This additional info makes sure that the control plane always can do proper loadbalancing over the links without saturating them. Since ECMP comes into play when there are several paths with the same length between a source and a destination, this will work even if the paths include a 10G and a 100G interface due to this added information - Simply put: Weighted ECMP traffic distribution.
 
 Now, it is time to setup a few services on our new shiny backbone. 
 
