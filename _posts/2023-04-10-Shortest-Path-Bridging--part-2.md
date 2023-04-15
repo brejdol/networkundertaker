@@ -33,7 +33,9 @@ Setting VLAN 4000-4001 as BVLANs automatically disables STP on them. AOS assigns
 **Caveats with different link speeds**
 
 One thing to remember here is that SPB doesn't have any way of determining the capacity of the links by itself. If you have the same link capacity in all directions as in the above example, this doesn't matter. BUT... If you have a few links on 100G, a few on 40G, maybe some 25G, and a bunch of 10G links, you NEED to configure the link metric properly.
+
 **Failing to set this correctly CAN result in packet loss.**
+
 Default link metric is 10 on all links. Since all links are open and can/will be used, you need to provide this information to the control plance so that SPB never over-saturate a link. Set the link metric so that it is a factor of the link capacity, where your highest link capacity has the lowest value, for example: 
 
 ```
