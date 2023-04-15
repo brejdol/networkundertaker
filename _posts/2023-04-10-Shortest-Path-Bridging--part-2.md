@@ -46,7 +46,7 @@ Default link metric is 10 on all links. Since all links are open and can/will be
 
 This additional info makes sure that the control plane always can do proper loadbalancing over the links without saturating them. Since ECMP comes into play when there are several paths with the same length between a source and a destination, this will work even if the paths include a 10G and a 100G interface due to this added information - Simply put: Weighted ECMP traffic distribution.
 
-Now, it is time to setup a few services on our new shiny backbone. 
+Now, it is time to setup a few services on our new shiny backbone.
 
 [Shortest Path Bridging Part 3 - Creating Services - L2VPN](https://networkundertaker.com/2023/04/11/Shortest-Path-Bridging-part-3.html)
 
