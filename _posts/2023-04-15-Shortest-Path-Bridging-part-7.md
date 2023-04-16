@@ -32,6 +32,6 @@ Well, this isn't completely incomprehensible actually. And here is where SPB shi
 
 That is what we'll focus on next: 
 
-[Shortest Path Bridging Part 8 - Troubleshooting](https://networkundertaker.com/2023/04/17/Shortest-Path-Bridging-part-8.html)
+[Shortest Path Bridging Part 8 - Troubleshooting in SPB](https://networkundertaker.com/2023/04/17/Shortest-Path-Bridging-part-8.html)
 
-[Start page]({{ '/' | absolute_url }})Troubleshooting SPB
+[Start page]({{ '/' | absolute_url }})
