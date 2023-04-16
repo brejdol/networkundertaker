@@ -71,7 +71,7 @@ This can consume quite a bit of bandwidth, but is easy on the control plane.
 
 *Tandem*(S,G): This mode use a separate multicast shortest path tree and forwarding database. Tandem replication uses very little bandwidth, but use more of the control plane resources due to that it addes a separate SPT/FDB per service. In a small environment, this doesn't matter.
 
-*Tandem*(\*,G): This mode uses a separate multicast tree. This is not a SPT, and is not confruent with the unicast SPT. A multicast (\*,G) is created for every BVLAN using Tandem (\*,G) multicast replication. This tree is similar to a STP, and is rooted at one SPB node according to the bridge priority. This mode is a compromise between bandwidth and control plance resources. This might be the best option if most traffic is sourced or destined towards the root bridge.
+*Tandem*(\*,G): This mode uses a separate multicast tree. This is not a SPT, and is not confruent with the unicast SPT. A multicast (\*,G) is created for every BVLAN using Tandem (\*,G) multicast replication. This tree is similar to a STP setup, and it is rooted at one SPB node according to the bridge priority. This mode is a compromise between bandwidth and control plance resources. This might be the best option if most traffic is sourced or destined towards the root bridge.
 
 I usually use Tandem(S,G) mode, since I only handle small environments. Control plane load isn't an issue.
 
