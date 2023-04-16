@@ -28,7 +28,7 @@ The same in the other direction - We import the routes from the local customer A
 We then import the routes from their other sites by importing all routes from the customer's ISIDs.
 Finally, from the global route manager (not within a VRF), we redistribute the exported eBGP routes from the shared_services VRF into the customer A and B's ISIDs so that all connected sites get them.
 
-Well, this isn't completely incomprehensible actually. And here is where SPB shines - You can do a lot with little. Config is short, readable, and possible to grasp fairly quick. It isn't nestled, nor obfuscated. You see what the outcome will be. If you use automation, you don't really care about how long or how nestled the configuration is, and rightly so - You want to concentrate on more important things. But in some cases, for example when you have to troubleshoot, the actual bulk of the configuration does makes a difference. 
+Well, this isn't completely incomprehensible actually. And this is where SPB shines - You can do a lot with little. Config is short, readable, and possible to grasp fairly quick. It isn't nestled, nor obfuscated. You see what the outcome will be. If you use automation, you don't really care about how long or how nestled the configuration is, and rightly so - You want to concentrate on more important things. But in some cases, for example when you have to troubleshoot, the actual bulk of the configuration does makes a difference. 
 
 And troubleshooting is up next: 
 
