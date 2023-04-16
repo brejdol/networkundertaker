@@ -30,7 +30,7 @@ Finally, from the global route manager (not within a VRF), we redistribute the e
 
 Well, this isn't completely incomprehensible actually. And here is where SPB shines - You can do a lot with little. Config is short, readable, and possible to grasp fairly quick. It isn't nestled, nor obfuscated. You see what the outcome will be. If you use automation, you don't really care about how long or how nestled the configuration is, and rightly so - You want to concentrate on more important things. But in some cases, for example when you have to troubleshoot, the actual bulk of the configuration does makes a difference. 
 
-That is what we'll focus on next: 
+And troubleshooting is up next: 
 
 [Shortest Path Bridging Part 8 - Troubleshooting in SPB](https://networkundertaker.com/2023/04/17/Shortest-Path-Bridging-part-8.html)
 
