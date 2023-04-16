@@ -17,7 +17,7 @@ In an ALE switch (Alcatel-Lucent Enterprise), VLANs 4000-4016 are reserved for B
 
 ![Topology](/SPB-topology.png)
 
-In this little setup of SPB, we have five participating nodes, all directly connected with several 100G interfaces each. And to refresh the abbreviations: BEB = Backbone Edge Bridge. This is an SPB-node that deliver services to someone/something. A BEB is simply put an SPB-node that has customer-facing ports. BCB = Backbone Core Bridge. This is an SPB-node that hasn't got any services enabled on any ports. It just switches the BVLANs, and doesn't know nor care about any services within them.
+In this little setup of SPB, we have five participating nodes, all directly connected with several 100G interfaces each. And to refresh the abbreviations: BEB = Backbone Edge Bridge. This is an SPB-node that deliver services to someone/something. A BEB is simply put a SPB-node that has customer-facing ports. BCB = Backbone Core Bridge. This is a SPB-node that hasn't got any services enabled on any ports. It just switches the BVLANs, and doesn't know nor care about any services within them.
 
 ``` 
 BEB1-> spb bvlan 4000-4001
