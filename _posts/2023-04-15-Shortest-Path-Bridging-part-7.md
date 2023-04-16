@@ -2,7 +2,7 @@
 
 In a highly segmented L3 VPN design where every VPN maps to its own VRF, it is still common to have shared services that many VPNs have to reach. For example DNS, internet access, DHCP, NTP services etc. One way of doing this is by using VRF leaking.
 
-![Shared-Services](/Sharded-services-L3VPN.png)
+![Shared-Services](/Shared-services-L3VPN.png)
 
 In the above example, we have two customers, A and B. Both customers have a VRF in all four BEB nodes, customer A has isid 4002 in the SPB backbone, customer B has isid 4003. Routes are propagated between the customer sites/VRFs as explained earlier.
 
