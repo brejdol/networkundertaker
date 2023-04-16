@@ -4,7 +4,7 @@ In a highly segmented L3 VPN design where every VPN maps to its own VRF, it is s
 
 ![Shared-Services](/Shared-services-L3VPN.png)
 
-In the above example, we have two customers, A and B. Both customers have a VRF in all four BEB nodes, customer A has isid 4002 in the SPB backbone, customer B has isid 4003. Routes are propagated between the customer sites/VRFs as explained earlier.
+In the above example, we have two customers, A and B. Both customers have a VRF in all four BEB nodes, customer A has isid 4002 in the SPB backbone, customer B has isid 4003. Routes are propagated between the customer sites/VRFs via the L3VPN setup explained [here.](https://networkundertaker.com/2023/04/12/Shortest-Path-Bridging-part-6.html)
 
 BEB1 and BEB2 also have VRFs containing the shared services firewalls that handle the internet peering with eBGP towards the upstream provider. The shared services VRFs is connected to the backbone via isid 4004. Customer A and B needs internet access. To achieve this, we can leak routes between the customer VRFs and the shared services VRF, since everyone is connected to the SPB backbone:
 
