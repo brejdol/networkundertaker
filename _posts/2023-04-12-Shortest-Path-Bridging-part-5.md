@@ -12,7 +12,7 @@ If it would be a legacy VLAN, you would do it like this:
 ip interface vlan-1000 address 172.29.19.1/24 vlan 1000
 ```
 
-Yes, this weird AOS syntax. It's not that hard to understand though. The name on an IP-interface can be anything, but a good practice is to name the VLAN/Service to something self-explanatory. Anyway, you can do inline routing in SPB in the same way you would do it in a legacy VLAN. The same goes for VRFs and all routing protocols and commands:
+Yes, this weird AOS syntax again. It's not that hard to understand though. The name on an IP-interface can be anything, but a good practice is to name the VLAN/Service to something self-explanatory. Anyway, you can do inline routing in SPB in the same way you would do it in a legacy VLAN. The same goes for VRFs and all routing protocols and commands:
 
 ```
 vrf create usr
