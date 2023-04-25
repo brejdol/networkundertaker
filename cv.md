@@ -14,7 +14,6 @@ I spend my days running technical projects, designing, (then breaking), securing
 Certified on Fortigate firewalls (Datacenter NSE7 + SD-WAN NSE7), FortiADC, and FortiAuthenticator. And Aruba Wireless.
 
 I try to lead my teams by example and knowledge, not by authority.
-Blogs about heaven and hell at https://networkundertaker.com
 
 Feel free to hook up with me at Linkedin. Or drop me a mail.
 I use the mailservice that starts with a G, and the address constitutes of my full name with a dot between my name and surname. 
