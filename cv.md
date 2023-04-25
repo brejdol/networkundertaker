@@ -1,10 +1,10 @@
 ---
 layout: page
-title: CV
-tagline: cv
+title: Curriculum Vitae
+tagline: to sum it up...
 permalink: /cv.html
 ref: Curriculum Vitae
-order: 2
+order: 3
 ---
 
 ![Me](/jag.jpg)
