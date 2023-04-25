@@ -4,7 +4,7 @@ title: Curriculum Vitae
 tagline: to sum it up...
 permalink: /cv.html
 ref: Curriculum Vitae
-order: 3
+order: 0
 ---
 
 ![Me](/jag.jpg)
