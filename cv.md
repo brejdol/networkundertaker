@@ -1,9 +1,12 @@
+---
 layout: page
 title: CV
-tagline: Curriculum Vitae
-ref: cv
+tagline: cv
+permalink: /cv.html
+ref: Curriculum Vitae
 order: 3
 ---
+
 ![Me](/jag.jpg)
 
 I spend my days running technical projects, designing, (then breaking), securing, and troubleshooting enterprise networks that utilize a plethora of techniques (MPLS, EVPN/VXLAN, SPB, SR). I also work with cloud networking integrations, run IPv6 implementation projects, and I teach sometimes. Fluent in routing and switching protocols, under/overlays, firewalls and proxies, virtualization, and the adjacent technologies (PKI, Radius, Authentication, AD, DNS, DHCP etc). I take advantage of my earlier experiences as a formally trained musician/teacher in my daily work - Since it's all about cooperation, communication, timing and skill.
