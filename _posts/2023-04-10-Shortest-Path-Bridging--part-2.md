@@ -36,7 +36,7 @@ One thing to remember here is that SPB doesn't have any way of determining the c
 
 *Failing to set this correctly CAN result in packet loss.*
 
-Default link metric is 10 on all links. Since all links are open and can/will be used, you need to provide this information to the control plance so that SPB never over-saturate a link. Set the link metric so that it is a factor of the link capacity, where your highest link capacity has the lowest value, for example: 
+Default link metric is 10 on all links. Since all links are open and can/will be used, you need to provide this information to the control plane so that SPB never over-saturate a link. Set the link metric so that it is a factor of the link capacity, where your highest link capacity has the lowest value, for example: 
 
 ```
 400G links with metric 250
