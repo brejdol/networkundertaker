@@ -1,6 +1,6 @@
 **Shortest Path Bridging Part 2 - Setting up the backbone**
 
-Before enjoying all things SPB, we have to setup the backbone mesh of SPB-enabled switches/routers. In this setup, Alcatel-Lucent Omniswitch 6900s will be used. Check them out [here.](https://www.al-enterprise.com/-/media/assets/internet/documents/omniswitch-6900-datasheet-en.pdf) They are plucky little things!
+Before enjoying all things SPB, we have to setup the backbone mesh of SPB-enabled switches/routers. In this setup, Alcatel-Lucent Omniswitch 6900s will be used. Check them out [here.](https://www.al-enterprise.com/-/media/assets/internet/documents/omniswitch-6900-datasheet-en.pdf) They are plucky little things that have an amazing set of features, a very competetive price, and no weird licensing schemes!
 The AOS syntax will be somewhat confusing if you are a Cisco/Juniper person. In fact, it will be confusing no matter what router-lingo you are used to. Deal with it. You are smart. AOS is flat as a pancake - No levels, no hierarchy. Nothing you can "enter", with the exception of a vrf. You can go into a vrf. And stay there for as long as you want to. No "conf t" or "edit", or "commit" - If you type it in, it is there and online (some things have to be enabled after creation though.). This isn't really meant to be a comprehensive guide to how the AOS cli works, only to how you get SPB up and running. With that said, the configuration will look very much alike in an Extreme switch, albeit with their lingo. 
 Let's get on with it.
 
