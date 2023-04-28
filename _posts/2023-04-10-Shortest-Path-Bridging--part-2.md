@@ -46,7 +46,7 @@ Default link metric is 10 on all links. Since all links are open and can/will be
 10G  links with metric 10000
 ```
 
-This additional info makes sure that the control plane always can do proper loadbalancing over the links without saturating them. ECMP comes into play when there are several paths with the same length between a source and a destination, this will work even if the paths include a 10G and a 100G interface due to this added information. With the added correct link metric, you will always get a properly weighted ECMP traffic distribution.
+This additional info makes sure that the control plane always can do proper loadbalancing over the links without saturating them. ECMP comes into play when there are several paths with the same length between a source and a destination, this will work even if the paths include a 10G and a 100G interface due to this added information. With the added correct link metric, you will always get a properly weighted ECMP traffic distribution. 
 
 Now, it is time to setup a few services on our new shiny backbone.
 
