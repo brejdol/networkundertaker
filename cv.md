@@ -14,10 +14,7 @@ Network Architect / Network Consultant
 
 Name:	Rickard Andrinsson
 Date of birth: 	03/11/74
-Company:	NetIP AB
-Address:	Sollentunavägen 118
-	191 45 Sollentuna
-E-mail:	rickard.andrinsson@netip.se	
+Company:	NetIP AB Sweden
 
  
 **Profile**
