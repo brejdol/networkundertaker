@@ -12,9 +12,9 @@ order: 0
 Network Architect / Network Consultant
 
 
-Name:	Rickard Andrinsson
-Date of birth: 	03/11/74
-Company:	NetIP AB Sweden
+Name:	Rickard Andrinsson \\
+Date of birth: 	03/11/74 \\
+Company:	NetIP AB Sweden \\
 
  
 **Profile**
