@@ -32,6 +32,6 @@ Well, this isn't completely incomprehensible actually. And this is where SPB shi
 
 And troubleshooting is up next: 
 
-[Shortest Path Bridging Part 8 - Troubleshooting in SPB](https://networkundertaker.com/2023/04/17/Shortest-Path-Bridging-part-8.html)
+[Shortest Path Bridging Part 8 - Troubleshooting SPB](https://networkundertaker.com/2023/04/17/Shortest-Path-Bridging-part-8.html)
 
 [Start page]({{ '/' | absolute_url }})
