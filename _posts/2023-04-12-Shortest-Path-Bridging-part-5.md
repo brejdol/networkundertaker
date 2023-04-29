@@ -49,7 +49,7 @@ service spb 2 sap port 1/1/2:111
 
 This creates a two-pass routing setup (traffic pass the router 2 times), where we have the dummy VLANs 110 and 111 with IP interfaces in the VRF named "srv", and the interfaces maps to the SPB service 1 and 2. The rtr-port option turns off all L2 protocols and disable all BUM traffic, everything on this port will be unicast only. A loopback cable between port 1/1/1 and 1/1/2 bridges the services with the dummy VLANs. It is also possible (read: Best practice) to use a linkagg in this setup for redundancy.
 
-Next up, we'll take a look on L3 services.
+Next up, more L3.
 
 [Shortest Path Bridging Part 6 - Routing Continued - L3 services](https://networkundertaker.com/2023/04/12/Shortest-Path-Bridging-part-6.html)
 
