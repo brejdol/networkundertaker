@@ -26,7 +26,7 @@ Branch-USR-Core:: show spb isis ?
  (Shortest Path Bridging Command Set)
 ```
 
-Since we're checking out the backbone currently, let's focus on the last: INTERFACE, NODES, INFO, DATABASE, BVLANS, and ADJACENCY:
+Since we're checking out the backbone currently, let's focus on the ones that obviously are linked to the backbone functions: INTERFACE, NODES, BVLANS, and ADJACENCY:
 
 ```
 BRANCH-USR-Core:: show spb isis interface
@@ -74,3 +74,6 @@ show mac-learning port 1/1/51A
 show mac-learning domain spb serviceid 40001
 ```
 
+[Shortest Path Bridging Part 8 - Looping SPB](https://networkundertaker.com/2023/04/17/Shortest-Path-Bridging-part-9.html)
+
+[Start page]({{ '/' | absolute_url }})
