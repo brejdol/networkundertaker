@@ -17,15 +17,15 @@ I have around three years of operational knowledge with SPB wich means I've made
 
 * Create a mess with old the legacy network using STP, and new links over SPB. You really need to plan this. Adding the BVLANs in your old environment provides paths to SPB that you might need initially to create the mesh. To STP, the new paths through SPB just looks like you suddenly got a lot more fibers. You MUST turn off STP for all BVLANS in your legacy environment, otherwise you will have blocks where there should be none. For SPB, the path through the legacy network is invisible, it can only see SPB nodes. 
 
-Also, try to segregate so that you don't have the same VLANs as services on the uplinks in both new and old environment. This can be tricky to pull off, because you have your set amount of switchports. Just be very aware of that STP can create new blocks where you didn't have any yesterday. Try to make a plan where you connect new uplinks to the legacy environment via SPB. Then you can move one VLAN at a time from your old uplinks to your new SPB-based uplinks. 
+* Try to segregate so that you don't have the same VLANs as services on the uplinks in both new and old environment. This can be tricky to pull off, because you have your set amount of switchports. Just be very aware of that STP can create new blocks where you didn't have any yesterday. Try to make a plan where you connect new uplinks to the legacy environment via SPB. Then you can move one VLAN at a time from your old uplinks to your new SPB-based uplinks. 
 
-You will create a mess if you mix SPB uplinks with legacy uplinks. STP will work, but you can end up in weird situations where you have to manually turn off STP on a legacy VLAN in order to make it work. We referred to this as being in "the no man's land" - Basically, your network state is... unclear at best. You will get unexpected blocks, and it will be hard to instantly see why, and if you disable STP, you might/might not create a loop. Unclear status is the worst. Do everything to avoid it.
+* You will create a mess if you mix SPB uplinks with legacy uplinks. STP will work, but you can end up in weird situations where you have to manually turn off STP on a legacy VLAN in order to make it work. We referred to this as being in "the no man's land" - Basically, your network state is... unclear at best. You will get unexpected blocks, and it will be hard to instantly see why, and if you disable STP, you might/might not create a loop. Unclear status is the worst. Do everything to avoid it.
 
 * Looping your BVLAN. Just don't. Make sure to turn off STP in your legacy environment if you switch any BVLANs through it, and don't ever connect anything else to the assigned BVLANs. 
 
 **Stuff SPB can't do**
 
-* Active-active dual homing. I don't understand how that would be possible. It maybe is, but I think not. Will get back to you if I find a way to pull it off.
+* Active-active dual homing. I don't understand how that would be possible. It maybe is, but I think not. Will get back to you if I find a way to pull it off. If you need that, you will need EVPN/MPLS/SR.
 
 * Interaction with the outside - SPB is based on an IGP. You can't easily interact with anything else, unless it speaks SPB. You can interconnect with an Extreme environment for example. But otherwise, not much talk SPB natively. You will have an edge to the outside in most cases. ProxMox is the only virtualization environment that I know of that can handle SPB. Haven't tried it though.
 
