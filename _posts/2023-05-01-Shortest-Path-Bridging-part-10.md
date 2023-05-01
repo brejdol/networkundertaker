@@ -25,7 +25,7 @@ I have around three years of operational knowledge with SPB wich means I've made
 
 **Stuff SPB can't do**
 
-* Active-active dual homing. I don't understand how that would be possible. It maybe is, but I think not. Will get back to you if I find a way to pull it off. If you need that, you will need EVPN/MPLS/SR.
+* Active-active dual homing. I don't understand how that would be possible. It maybe is, but I think not. Will get back to you if I find a way to pull it off. As of now, if you need A-A dual homing, you'll have to go the EVPN/MPLS/SR route.
 
 * Interaction with the outside - SPB is based on an IGP. You can't easily interact with anything else, unless it speaks SPB. You can interconnect with an Extreme environment for example. But otherwise, not much talk SPB natively. You will have an edge to the outside in most cases. ProxMox is the only virtualization environment that I know of that can handle SPB. Haven't tried it though.
 
