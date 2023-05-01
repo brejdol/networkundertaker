@@ -6,7 +6,7 @@ There aren't that many operational guides on how to use SPB, nor which problems 
 
 As long as you understand SPB's boundaries, it is pretty amazing - You can do a lot with just a little configuration. You end up with a sturdy and resilient modern network that gives you a set of flexible tools that will help you to solve problems further ahead. 
 
-If you add MACSEC encryption with AES256 on all links (which is supported in both ALE and Extreme switches), you have a VERY secure transport network. Still, it is a seriously niche technique - Supported by few, used by even fewer.
+If you add MACSEC encryption with AES256 on all links (which is supported in both ALE and Extreme switches), you have a VERY secure transport network. Still, it is a seriously niche technique - Supported by few vendors, used by even fewer users.
 
 If you happen to have local networks using ALE and/or Extreme gear, there is really nothing to be afraid of - You have all to gain and nothing to lose. SPB ftw!
 
