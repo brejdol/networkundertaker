@@ -60,7 +60,7 @@ SPB ISIS Nodes:
  Customer-5       9424.e17c.3135  0xc3135  32768 (0x8000)
 ```
 
-This is all the SPB nodes in total that the BRANCH-USR-Core has discovered, including itself.
+The above command shows us all the SPB nodes in total that the BRANCH-USR-Core has discovered, including itself.
 System name is what it is, system Id is the unique node-id in the SPB domain (BMAC).
 SourceID is a 20-bit identifier used for mapping the origin of BUM traffic (only relevant in tandem multicast mode, check out this post about multicast modes).
 The bridge priority is used as a tie breaker during path computation. By manipulating the bridge priority, you can create a similar hierarchy as you would with STP, with lowest prio in the core etc.
@@ -75,7 +75,7 @@ SPB ISIS Adjacency:
  BEB-2        : 9424.e14f.43c3  L1    UP        19     1/1/54A
 ```
 
-The command shows us all adjacencies that the local node have established to other nodes. Again, we see the node name, system ID (BMAC) as well as the type (always L1 for SPB IS-IS).
+The command above shows us all adjacencies that the local node have established to other nodes. Again, we see the node name, system ID (BMAC) as well as the type (always L1 for SPB IS-IS).
 We also see state, the hold time (seconds until the adjacency is declared lost if no "hello" message is recieved), and the interface where the adjacency is formed.
 
 ```
@@ -92,7 +92,7 @@ SPB ISIS BVLANS:
 
 BVLANs:     5
 ```
-Here, we can see the number of BVLANs, the ECT-algorithm used, if the BVLAN is used, and have any services mapped to it. BVLAN 4000 have no services mapped, since it is used for the IS-IS control plane messaging. The other BVLANs have quite a few services mapped, and all are using SG-mode multicast replication. The root bridge is only visible for the BVLANs that use (*,G)tandem replication.
+The command "show spb isis bvlans" shows us the number of BVLANs, the ECT-algorithm used, if the BVLAN is used, and have any services mapped to it. BVLAN 4000 have no services mapped, since it is used for the IS-IS control plane messaging. The other BVLANs have quite a few services mapped, and all are using SG-mode multicast replication. The root bridge is only visible for the BVLANs that use (*,G)tandem replication.
 
 ```
 BRANCH-USR-Core:: show spb isis unicast-table
@@ -149,7 +149,7 @@ SPB ISIS Unicast MAC Table:
 MAC Addresses: 45
 ```
 
-In this output, we can see the egressing interface when sending traffic to that node. The mac-address is the system-id, so we're only seeing nodes mac-addresses. Paths can and will differ between BVLANs due to their different SPT algorithms.
+In this output in the example above, we can see the egressing interface when sending traffic to that node. The mac-address is the system-id, so we're only seeing nodes mac-addresses. Paths can and will differ between BVLANs due to their different SPT algorithms.
 
 ```
 SH-USR-Core:: show spb isis spf bvlan 4000
@@ -170,7 +170,7 @@ SPB ISIS Path Table:
 SPF Path count: 9
 ```
 
-This command gives use the resulting paths of the current shortest path forwarding tree calculations in your local node. We see the destination + its BMAC, and the next hop node + its BMAC, the SPB total metric for the path, and the total number of hops until the traffic reaches its destination.
+This command "show spb isis spf bvlan <bvlan-id>" gives use the resulting paths of the current shortest path forwarding tree calculations in your local node. We see the destination + its BMAC, and the next hop node + its BMAC, the SPB total metric for the path, and the total number of hops until the traffic reaches its destination.
 
 **Checking the configuration**
 
@@ -195,7 +195,7 @@ spb isis admin-state enable
 spb ipvpn bind vrf hyperv isid 20000 gateway 100.64.90.1 all-routes
 ```
 
-This is the equivalent to "sho run ..." in a Cisco, you are checking the configuration. Without any options, it will show the configuration in clear text. In the above case, it will show everything that regards SPB. Show configuration snapshot can be used with just about any keyword in the configuration, like:
+The above command is the equivalent to "sho run ..." in a Cisco, you are checking the configuration. Without any options, it will show the configuration in clear text. In the above case, it will show everything that regards SPB. Show configuration snapshot can be used with just about any keyword in the configuration, like:
 
 ```
 show configuration snapshot interface
