@@ -170,7 +170,7 @@ SPB ISIS Path Table:
 SPF Path count: 9
 ```
 
-This command "show spb isis spf bvlan "<bvlan-id>"" gives use the resulting paths of the current shortest path forwarding tree calculations in your local node. We see the destination + its BMAC, and the next hop node + its BMAC, the SPB total metric for the path, and the total number of hops until the traffic reaches its destination.
+This command "show spb isis spf bvlan 4000" gives use the resulting paths of the current shortest path forwarding tree calculations for bvlan 4000 in your local node. We see the destination + its BMAC, and the next hop node + its BMAC, the SPB total metric for the path, and the total number of hops until the traffic reaches its destination.
 
 **Checking the configuration**
 
