@@ -1,0 +1,5 @@
+**Summary**
+
+Ok, that became more posts that I expected initially. The intent was to try to write down something that would discribe the technique fairly in depth, and explain how the move from a legacy environment to a full non-ip-based SPB-mesh complete with services can be done. There aren't that many operational guides on how to use SPB, nor what it actually solves. And I think the protocol deserves better. As long as you understand SPB's boundaries, it is pretty amazing - You can do a lot with just a little configuration. You end up with a sturdy and resilient modern network that gives you a set of flexible tools that will help you to solve problems further ahead. If you add MACSEC encryption with AES256 on all links (which is supported in ALE switches), you have a VERY secure transport network. Still, it is niche, supported by few, used by even fewer. 
+
+[Start page]({{ '/' | absolute_url }})
