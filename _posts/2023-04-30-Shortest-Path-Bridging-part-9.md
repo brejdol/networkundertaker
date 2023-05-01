@@ -1,6 +1,6 @@
 **Operating services in SPB**
 
-Below is a list with commands and the output from them, regarding services:
+Below you'll find commands and the output from them, regarding services:
 
 ```
 BRANCH-USR-Core:: show service spb
