@@ -33,7 +33,7 @@ Well, this isn't completely incomprehensible actually. And this is where SPB shi
 
 If you use automation, you don't really care about how long or how nestled the configuration is, and rightly so - You want to concentrate on more important things. But in some cases, for example when you have to troubleshoot, the actual bulk of the configuration does makes a difference. 
 
-And day-to-day operation and troubleshooting is up next: 
+And day-to-day operations and troubleshooting is up next: 
 
 [Shortest Path Bridging Part 8 - Operating the backbone in SPB](https://networkundertaker.com/2023/04/17/Shortest-Path-Bridging-part-8.html)
 
