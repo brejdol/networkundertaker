@@ -31,7 +31,7 @@ I have around three years of operational knowledge with SPB wich means I've made
 
 * QoS. Well you can do a little. But SPB is for the datacenter, all pipes are meant to be open at full blast.
 
-* Traffic engineering. Well, you can do that to some extent if you fiddle with the priority. Usually, you don't do that. The whole point is to let the protocol solve that for you. You can have path assymetry within SPB, but all that is obfuscated from your view. SPB isn't MPLS. You don't have all those knobs.
+* Traffic engineering. You can do that to some extent if you fiddle with the priority. Usually, you don't do that. The whole point is to let the protocol solve that for you. You can have path assymetry within SPB, but all that is obfuscated from your view. SPB isn't MPLS. You don't have all those knobs to turn. SPB is simplistic. Maybe too simplistic for your needs.
 
 
 [Shortest Path Bridging Part 11 - Summary](https://networkundertaker.com/2023/05/01/Shortest-Path-Bridging-part-11.html)
