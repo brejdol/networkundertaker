@@ -1,6 +1,8 @@
 **Creating Services - L2VPNs**
 
-A service is the equivalent of a broadcast domain within the SPB framework (regarding source-learning, flooding etc), so it works very much like a legacy VLAN. As stated before, even L3 services are in fact bridged. The main operational difference is that a VLAN has to be configured in all switches in the path between ingress/egress ports. A service only needs to be configured in the edge nodes. If there is 100 switches in between is totally irrelevant. This is because a node that has a service will advertise it to all other nodes in the control BVLAN. All nodes that have that unique service isid and access ports configured (a service isn't active in a node until it has access ports mapped to the service) will be bridged together, effectively creating an L2VPN between them over the backbone mesh. All other nodes that doesn't have that isid configured doesn't care. They just switch the BVLANs. 
+A service is the equivalent of a broadcast domain within the SPB framework (regarding source-learning, flooding etc), so it works very much like a legacy VLAN. As stated before, even L3 services are in fact bridged. The main operational difference is that a VLAN has to be configured in all switches in the path between ingress/egress ports. A service only needs to be configured in the edge nodes. If there is 100 switches in between is totally irrelevant. This is because a node that has a service will advertise it to all other nodes in the control BVLAN. 
+
+All nodes that have that unique service isid and access ports configured (a service isn't active in a node until it has access ports mapped to the service) will be bridged together, effectively creating an L2VPN between them over the backbone mesh. All other nodes that doesn't have that isid configured doesn't care. They just switch the BVLANs. 
 
 *A node in the SPB domain will always be root for the incoming service mac-addresses it forwards into the SPB domain.* 
 
@@ -8,8 +10,11 @@ This is one of the ways the SPB control plane makes sure everything is ok - If t
 
 A service needs four settings to go online:
 * A service number between 1-16777216. This service number only locally significant, but please, use the same everywhere. Keep it simple.
+
 * An isid number between 256-16777216. This number is globally unique in your SPB domain. And yes, the first 255 is reserved and can not be used, so if you have VLANS under 256, and want to create services that map to them (which is handy and easy to remember), start with 10xxx or something. you have a lot of service/isids to choose from.
+
 * You need to map your service to a bvlan, because the service will be encapsulated with an PBB-header within that BVLAN.
+
 * You need to map your service to a Service Access Port (SAP), which is the customer-facing port, where the PBB-header is stripped off, and the payload is delivered.
 
 ```
@@ -35,7 +40,9 @@ This means we double-tagged the outgoing traffic with 1000 as the outer s-vlan-i
 ```
 BEB1-> service 1000 sap port 1/1/48:all
 ```
-All? Yep. This means the SAP port will accept any untagged or tagged, or double/triple-tagged frame. Everything is accepted. You can send untagged, tagged, and double-tagged traffic at the same time, but do remember that a standard service is the equivalent to a broadcast domain, so you might want to keep the 1-to-1 mapping service-to-vlan. 1 vlan = 1 service IS the best practice. The service name and ISID have no correlation at all to the settings you choose on your SAP port. Nothing! That takes a while to get used to.The above examples does however assume all sides of the service are the same. Usually, you would want a bit more flexibility than that. And you can get that:
+All? Yep. This means the SAP port will accept any untagged or tagged, or double/triple-tagged frame. Everything is accepted. You can send untagged, tagged, and double-tagged traffic at the same time, but do remember that a standard service is the equivalent to a broadcast domain, so you might want to keep the 1-to-1 mapping service-to-vlan. 1 vlan = 1 service IS the best practice. 
+
+The service name and ISID have no correlation at all to the settings you choose on your SAP port. Nothing! That takes a while to get used to.The above examples does however assume all sides of the service are the same. Usually, you would want a bit more flexibility than that. And you can get that:
 
 ```
 BEB1-> service access port 1/1/48 vlan-xlation enable
@@ -51,7 +58,9 @@ Wrap that around your head for a bit. If you come from a VLAN-based environment,
 Let's do a summary:
 
 * A service is a broadcast domain (there are exceptions to this, we will go into that in the next chapter).
+
 * A service is switched transparently in the SPB domain. Nodes that doesn't have edge (SAP) ports enabled doesn't care, they just switch the BVLAN.
+
 * You can choose how you present the service on client facing ports (SAPs).
 
 The service itself also have more settings that can be of interest:
@@ -60,7 +69,9 @@ The service itself also have more settings that can be of interest:
 * By default, a PBB frame include all original tags, but you can remove tags on the ingress port: remove-ingress-tag enable
 * You can also map an L2-profile to the service, where you can choose to tunnel/drop STP-bpdus etc
 
-The big thing with a service is that you ONLY have to create it on the ingress/egress SPB-nodes that will serve clients. When you create a service, its ISID will be advertised out to ALL nodes that have a service with the same ISID, effectively creating an L2VPN between these nodes, and these nodes only. All other nodes just switch the BVLAN, and think nothing more of it. As you see, this is very much like creating a VLAN, and stretching it between switches. But with a service, all this work is done by the IS-IS underlay and the BVLAN, your service is advertised via the control plane. It doesn't matter if you have 100 switches inbetween the nodes you enable the service on - If they have a SPB adjacency, they will have this L2VPN service between them, spanning over the redundant SPB-mesh backbone where all paths are open.
+The big thing with a service is that you ONLY have to create it on the ingress/egress SPB-nodes that will serve clients. When you create a service, its ISID will be advertised out to ALL nodes that have a service with the same ISID, effectively creating an L2VPN between these nodes, and these nodes only. All other nodes just switch the BVLAN, and think nothing more of it. 
+
+As you see, this is very much like creating a VLAN, and stretching it between switches. But with a service, all this work is done by the IS-IS underlay and the BVLAN, your service is advertised via the control plane. It doesn't matter if you have 100 switches inbetween the nodes you enable the service on - If they have a SPB adjacency, they will have this L2VPN service between them, spanning over the redundant SPB-mesh backbone where all paths are open.
 
 **BUM-traffic**
 
@@ -77,7 +88,9 @@ I usually use Tandem(S,G) mode, since I only handle fairly small environments. C
 
 **Convergence**
 
-So what happens when a link fails? Well, it's the same as always - A clean failure where a fiber is cut, a SFP dies, or a switch in the path loses power is easy to handle. SPB has very very fast convergence times, usually under 50 ms if your network isn't huge. As you add more nodes, the convergence will be longer, but you need a sizable network to actually notice that. I would say you need to have way over 100 nodes to actually notice it. I only have access to smaller SPB meshes with around 20 nodes, and I can't really measure the outage if I pull a fiber, or pull the power on a switch in the path. It isn't really noticable, even if you are in a video call. With this said - Failures are often not that clean. A SFP can for example fail with a brown-out, not totally down, but working, then throwing errors and dropping traffic when warm etc etc. Those kinds of failures can still be messy. SPB is almost magic. Tragically enough, the ol' brown-outs still happen, even with SPB.
+So what happens when a link fails? Well, it's the same as always - A clean failure where a fiber is cut, a SFP dies, or a switch in the path loses power is easy to handle. SPB has very very fast convergence times, usually under 50 ms if your network isn't huge. As you add more nodes, the convergence will be longer, but you need a sizable network to actually notice that. I would say you need to have way over 100 nodes to actually notice it. I only have access to smaller SPB meshes with around 20 nodes, and I can't really measure the outage if I pull a fiber, or pull the power on a switch in the path. It isn't really noticable, even if you are in a video call. 
+
+With this said - Failures are often not that clean. A SFP can for example fail with a brown-out, not totally down, but working, then throwing errors and dropping traffic when warm etc etc. Those kinds of failures can still be messy. SPB is almost magic. Tragically enough, the ol' brown-outs still happen, even with SPB.
 
 Next up: More types of services. How about... Pseudo-wires?
 
