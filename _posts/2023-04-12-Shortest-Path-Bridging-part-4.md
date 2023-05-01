@@ -24,7 +24,7 @@ This setup has a lot of potential uses - Think about HA-traffic for example - Fi
 
 Connectivity Fault Management, or in short - CFM, and also known as 802.1ag, is a standard that sort of adheres to a pseudo-wire. It simply gives you the opportunity to make sure that the pseudo-wire service behave as a real cable: It will replicate the port states so that one port can't go up unless the other port is connected, just like a real cable. 
 
-This can come in handy for services like HA-setups in firewalls for example, since they might decide the failover based on the link state of the HA interfaces. Having CFM on these ports can drastically improve the failover times, since it will instantly bring down the pseudo-wire port in the other end if there is a link failure. If you don't configure CFM, the HA-setup has to probe other end first before deciding that there is an outage.\\
+This can come in handy for services like HA-setups in firewalls for example, since they might decide the failover based on the link state of the HA interfaces. Having CFM on these ports can drastically improve the failover times, since it will instantly bring down the pseudo-wire port in the other end if there is a link failure. If you don't configure CFM, the HA-setup has to probe other end first before deciding that there is an outage.
 
 __It is considered best practice to always use CFM when deploying a pseudo-wire.__
 
