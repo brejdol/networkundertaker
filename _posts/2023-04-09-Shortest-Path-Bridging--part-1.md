@@ -36,7 +36,7 @@ The following prerequisites have to be in in place:
 
 IS-IS doesn't ride on top of IP like OSPF or BGP by the way. It has its own IP protocol: 124. So SPB is using the IS-IS control plane messaging, very much like how MP-BGP extensions is handling the EVPN underlay within the BGP protocol. 
 
-__In practice, an SPB node doesn't need any IP set for SPB to work, even when providing L3 services to IP packets__ 
+__In practice, an SPB node doesn't need any IP set for SPB to work, even when providing L3 services to IP packets.__ 
 (Although some losers seems to like to have a management IP for some reason...).
 
 In part 2, we will set up the BVLANS, enable the SPB service, and add links, effectively creating the SPB backbone/underlay.
