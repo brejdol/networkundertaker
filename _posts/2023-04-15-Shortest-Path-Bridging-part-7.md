@@ -22,15 +22,18 @@ spb ipvpn redist source-vrf shared_services destination-isid 1003 all routes
 
 Let's break it down what goes on here, since AOS is completely incomprehensible:
 
-First, we export only the eBGP routes from the shared_service VRF (with the help of a route-map, creating one is easy, but outside the scope here).
+First, we export only the eBGP routes from the shared_service VRF (with the help of a route-map, (creating one is easy, but outside the scope here).
 Then we import the exported routes into customer A and B.
 The same in the other direction - We import the routes from the local customer A and B VRFs into the shared_services VRF.
 We then import the routes from their other sites by importing all routes from the customer's ISIDs.
+
 Finally, from the global route manager (not within a VRF), we redistribute the exported eBGP routes from the shared_services VRF into the customer A and B's ISIDs so that all connected sites get them.
 
-Well, this isn't completely incomprehensible actually. And this is where SPB shines - You can do a lot with little. Config is short, readable, and possible to grasp fairly quick. It isn't nestled, nor obfuscated. You can see what the outcome will be. If you use automation, you don't really care about how long or how nestled the configuration is, and rightly so - You want to concentrate on more important things. But in some cases, for example when you have to troubleshoot, the actual bulk of the configuration does makes a difference. 
+Well, this isn't completely incomprehensible actually. And this is where SPB shines - You can do a lot with little. Config is short, readable, and possible to grasp fairly quick. It isn't nestled, nor obfuscated. You can see what the outcome will be. 
 
-And troubleshooting is up next: 
+If you use automation, you don't really care about how long or how nestled the configuration is, and rightly so - You want to concentrate on more important things. But in some cases, for example when you have to troubleshoot, the actual bulk of the configuration does makes a difference. 
+
+And day-to-day operation and troubleshooting is up next: 
 
 [Shortest Path Bridging Part 8 - Operating the backbone in SPB](https://networkundertaker.com/2023/04/17/Shortest-Path-Bridging-part-8.html)
 
