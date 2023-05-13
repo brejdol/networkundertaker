@@ -12,7 +12,7 @@ Let's get on with it.
 
 A BVLAN, or "backbone VLAN" only has a special meaning for a SPB-node. For any other non-SPB switch in the path, it is just a VLAN. Ok, a VLAN that needs a slightly bigger frame-size (1524). Other than that - There's nothing more to it. Just switch it and think of something else. 
 
-If you are a SPB-enabled node, one BVLAN will carry control traffic. Another one would carry services. But a BVLAN is also a topology. It will carry a shortest path forwarding trees, created by all participating SPB nodes. Each node have their own SPF topology of the SPB mesh. And if you only have ONE topology, there is no need for more than two BVLANs - One for controller traffic, one for the services. 
+If you are a SPB-enabled node, one BVLAN will carry control traffic. Another one would carry services. But a BVLAN is also a topology. The control BVLAN will carry the shortest path forwarding trees, created by all participating SPB nodes. Each node have their own SPF topology of the SPB mesh. And if you only have ONE topology, there is no need for more than two BVLANs - One for controller traffic, one for the services. 
 
 It is very easy to think that a BVLAN can be used as an administrative segmentation - Like, one BVLAN for server-services, one for user-services etc. Don't fall into that trap! Every BVLAN adds a significant amount of controller traffic. If you have hundreds of SPB nodes, carrying thousands of services over many SPF topologies (BVLANS), you might be in trouble. Don't get me wrong - IS-IS scales very well as a protocol. Hence - SPB does to, but only if you set it up properly. A thousand SPB nodes in the same network isn't impossible. There are networks running today that have more nodes than that, without any issues. 
 
