@@ -24,7 +24,7 @@ Some operational things to be aware of:
 
 In an ALE switch (Alcatel-Lucent Enterprise), VLANs 4000-4016 are reserved for BVLAN use, but you can actually use whatever VLAN-id you want to. The only thing with VLANs 4000-4016 is that they can't be used for anything else than being BVLANs - in an ALE switch that is. 
 
-All deployment guides tells you to never use more than four BVLANs at the same time in the same SPB-network. As stated earlier - If you have ONE topology, there is no need for many BVLANs. Best practice is to have a separated BVLAN for the SPB controller traffic. And with one topology, you only need one BVLAN for the services. Enough about that. Let's build the backbone!
+All deployment guides tells you to never use more than four BVLANs at the same time in the same SPB-network. As stated earlier - If you have ONE topology, there is no need for many BVLANs. And with one topology, you only need one BVLAN for the services AND the controller traffic. Enough about that. Let's build the backbone!
 
 ![Topology](/SPB-topology.png)
 
