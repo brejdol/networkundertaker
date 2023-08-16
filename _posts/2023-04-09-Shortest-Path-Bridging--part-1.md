@@ -6,7 +6,7 @@ This gem of a technique - also known as 802.1aq - became something of the "Betam
 
 So what is SPB exactly? In its most basic form, it is a safe way to stretch L2 over ... Something. We'll get back to that. I've heard more colourful descriptions like: "Q-in-Q on speed". That isn't technically correct, but it does have a nice ring to it. I would actually add to that: "Q-in-Q + mac-in-mac encapsulation on speed" (speed in this case of course means "no blocked paths", and nothing else). Digging further down into what actually takes place in your equipment, I would say "tunneling". Get used to that way of thinking. There's more to SPB then "just" L2 stretched over... whatever it was. It also depends on your views on that topic really. Tunnels have mesmerized people since the days of Brunel and Stephenson. But let's not start a fist-fight over what a tunnel really is, (Hey, is MPLS tunneling by the way? \*Dodges fist\*), at least not yet. Let's check out what you can actually do with SPB.
 
-I have played around with trying explaining this as short as possible, to really boil everything down to one sentence. It is a good way to stop babbling (in which I have to practice). 
+I have played around with trying to explain this as short as possible, to really boil everything down to one sentence. It is a good way to stop babbling (in which I have to practice). 
 
 For good or worse, here it is: The ONE sentence to explain it all: 
 
