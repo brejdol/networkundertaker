@@ -12,4 +12,4 @@ Still, SPB is a seriously niche technique - Supported by few vendors, used by ev
 
 If you happen to have local networks using ALE and/or Extreme gear, there is really nothing to be afraid of - You have all to gain and nothing to lose. SPB ftw!
 
-[Start page]({{ '/' | absolute_url }})
+[Start på page]({{ '/' | absolute_url }})
