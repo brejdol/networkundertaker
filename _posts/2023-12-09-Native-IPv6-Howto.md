@@ -58,15 +58,17 @@ We now rewind the tape and start over. It's the same blue Joe, with the same ver
 
 This time, Joe gets the same IPv4 address and DNS via DHCPv4, but he also gets an IPv6 GUA address (documentation prefix in this example) and a RDNSS (company DNS server) via SLAAC. He checks his flight to Vegas, and since the airline company web page doesn't have an AAAA DNS record, only an A record, this traffic follow the above IPv4 path exactly. He then checks the DM his daughter sent him on Instagram, and since Instagram is reachable over IPv6 with a AAAA record, his very heavy phone opens an IPv6 connection to the IPv6 IP it got from the local resolver. The traffic follows the default route from the internal firewall, via the default route in the perimeter firewall and onwards. No NAT is performed because it isn't needed. End-to-end connectivety. And all OS:es prefer IPv6 _if_ they have an IPv6 address. 
 
-The company networking slaves gets an idea: This network for company cellphones might be a good candidate for native IPv6, due to the fact only fairly new and company managed cellphones are using it. They don't have any depenencies to legacy IPv4 applications, but they obviously will need some sort of conversion mechanism when trying to reach IPv4-only company/internet resources if going all in on IPv6. 
+The company networking slaves gets an idea: This network for company cellphones might be a good candidate for native IPv6, due to the fact only fairly new and company managed cellphones are using it. They don't have any dependencies to legacy IPv4 applications, but they obviously will need some sort of conversion mechanism when trying to reach IPv4-only company/internet resources. 
 
-**DNS64/NAT64**
+**NAT64/DNS64**
 
-NAT64 does what is says - It translates IPv6 addresses --> IPv4 addresses. DNS64 is another beast entirely. It is a DNS proxy that looks at all DNS queries, and when an IPv6-only client tries to reach a fqdn that doesn't have a valid AAAA record, the DNS64 proxy will create an AAAA DNS record from the A record, and it will map this AAAA record to an IPv6 IP. There is a reserved IPv6 prefix that can be used for this translation: 64:ff9b::/96. A /96 prefix leaves 32-bits for addresses, and that is what we need - The entire IPv4 address space from 0.0.0.0-->255.255.255.255 fits there. So, the end of this IPv6 address will look like this: 64:ff9b::(ipv4-address-in-hex). Traffic to this mock AAAA record/IP will then be translated into an IPv4 address with NAT64 and then follow the IPv4 path to the destination. This whole process adds a few milliseconds on all lookups, but it isn't really noticable, it doesn't feel sluggish at all, at least not in my setup.
+NAT64 does what is says - It translates IPv6 addresses to IPv4 addresses. DNS64 is another beast entirely. It is a DNS proxy that looks at all DNS queries from the clients, and when an IPv6-only client tries to reach a fqdn that doesn't have a valid AAAA record, the DNS64 proxy will create an AAAA DNS record from the A record, and it will map this record to an IPv6 IP. 
+There is a reserved IPv6 prefix that can be used for this translation: 64:ff9b::/96. A /96 prefix leaves 32-bits for addresses, and that is what we need - The entire IPv4 address space from 0.0.0.0-->255.255.255.255 fits there. 
+So, the end of this IPv6 address will look like this: 64:ff9b::(ipv4-address-in-hex). Traffic to this mock AAAA record/IP will then be translated into an IPv4 address with NAT64 and then follow the IPv4 path to the destination. This whole process adds a few milliseconds on all lookups, but it isn't really noticable, it doesn't feel sluggish at all, at least not in my setup.
 
 **How it is done in a Fortigate firewall**
 
-You can do this in _anything_ that can handle DNS64/NAT64, and the setup will be sort of the same, with different methodology depending on the gear. I just happen to work with, and have access to Fortigates:
+You can do this in _anything_ that can handle DNS64/NAT64, and the setup will be sort of the same, just with different methodology depending on the gear. I just happen to work with, and have access to Fortigates:
 
 * In the internal firewall where the gateway of your IPv6 network lives, turn on the DNS Database feature, enable DNS service on the interface, use "Forward to system DNS"
 
@@ -76,7 +78,7 @@ You can do this in _anything_ that can handle DNS64/NAT64, and the setup will be
 
 Create an IPv6 VIP, tick "Use Embedded", and set the external IP-range to use the last 32 bits of the address: 64:ff9b::-64:ff9b:ffff:ffff. This ensures _any_ IPv4 address in the entire address space can be mapped in this dynamic VIP. The destination side of this DNAT VIP will get the "real" IPv4 address dynamically from the DNS64 process.
 
-![DNAT64-VIP](/DNAT64-VIP.png)
+![DNAT64-VIP](/DNAT64-VIP1.png)
 
 You already have rules for your IPv4 and your IPv6 traffic since you had dual stack running. Now, add another rule, where the src-ip is your IPv6 /64 prefix for the network, and the destination is the VIP you created. Also, create a SNAT-pool with a few IPv4 IPs that will work with your routing table. Enable NAT64:
 
