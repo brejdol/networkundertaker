@@ -134,7 +134,7 @@ Usually, a client that doesn’t get a DHCP lease within 20-30 seconds will hand
 
 **CLAT/464XLAT**
 
-What you see now is actually the CLAT client doing its magic. This is the _customer-side translator_, locally on your phone. It is doing stateless NAT46. The CLAT in the client together with the PLAT (provider-side translator) which in our case is the NAT64 together provides the translation mechanism know as 464XLAT.  
+What you see now is actually the CLAT client doing its magic. This is the _customer-side translator_, locally on your phone. It is doing stateless NAT46. The CLAT in the client together with the PLAT (provider-side translator) which in our case is the NAT64 _together_ provides the translation mechanism know as 464XLAT.  
 The CLAT client is triggered by the absence of a IPv4 address, but IPv6 exists, and there is a NAT64 prefix available (signalled via router advertisement containing the PREF64 option, or via the ipv4only.arpa fqdn in DNS). What the CLAT client does when triggered is:  
 * Set an IP/gw out of the reserved range 192.0.0.0/29
 * Create a "VIP" on the gateway, doing stateless NAT46 --> Interface IPv6 IP.
