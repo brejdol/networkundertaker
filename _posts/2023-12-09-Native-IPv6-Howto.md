@@ -1,6 +1,6 @@
 **Introduction**
 
-I have run an IPv6-only PoC-network for 15 months, testing out how different clients and operating systems works, and thought I should share my findings. There are a lot of articles about IPv6 out there, but few that walks you through the entire process from native IPv4, via dual stack all the way to the goal: 
+<p>I have run an IPv6-only PoC-network for 15 months, testing out how different clients and operating systems works, and thought I should share my findings. There are a lot of articles about IPv6 out there, but few that walks you through the entire process from native IPv4, via dual stack all the way to the goal:</p>
 
 * A native IPv6 network that transparently translates traffic to legacy IPv4 destinations on the fly when needed. 
 * A native IPv6 network that automatically can handle legacy applications that need native IPv4. 
