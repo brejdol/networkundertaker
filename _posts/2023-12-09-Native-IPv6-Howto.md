@@ -87,7 +87,9 @@ You already have rules for your IPv4 and your IPv6 traffic since you had dual st
 This rule will make this special VIP reachable, and the traffic that hits this rule will get NAT64:ed out on one IP in the SNAT pool. For the perimenter firewall, the SNAT pool’s IPs looks like source IPs, it's just ...SNAT. 
 
 ```
-_Make sure the IPs in the SNAT pool starts and ends on valid subnet boundaries, otherwise you will get unpredictible results!_
+!!!
+Make sure the IPs in the SNAT pool starts and ends on valid subnet boundaries, 
+otherwise you will get unpredictible results!
 ```
 
 If everything checks out, you can now enable the DNS64 proxy in the Fortigate CLI. This turns the whole setup _ON_:
