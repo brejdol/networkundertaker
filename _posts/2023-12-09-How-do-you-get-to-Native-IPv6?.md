@@ -154,6 +154,7 @@ It's simple enough but it might not scale if you have embedded devices that are 
 But now we're getting to the elephant in the room, and it is a very big elephant:  
 
 The Windows suite of operating systems doesn't have a working implementation of CLAT that can be used on wired/wireless interfaces as of today (dec. 2023). I don't know of any tools that can fix this either. To be honest I haven't checked for 3rd party tools for this, since this _should_ be handled in the OS in my opinion.  
+
 The irony in this is that Windows actually _has_ a CLAT client, but it can as far as I understand it only be used on WWAN type interfaces.  
 
 This is pretty unfortunate given the amount of Windows clients/servers that are out there. As of now, there is nothing else to do but wait for CLAT to be available for regular wireless/wired interfaces on windows.  
