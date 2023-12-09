@@ -143,7 +143,9 @@ The CLAT client is triggered when there is no IPv4 address, but an IPv6 address 
 
 What does this mean then? Well, it means a fairly updated device (from OSX 13 and iOS 16 and up, Android 4.3+, including Chromebooks, etc) has a means of handling the fact that it _doesn't_ have an IPv4 IP.  
 This functionality is a "helper" for applications that need a literal IPv4 IP on the phone itself - For example when pinging an IPv4 IP from the phone, or using a legacy app that _only_ can use an IPv4 address (which isn't really gonna happen due to the fact that Apple forced all apps in appstore to support native IPv6 since 2010-ish).  
-Think of it as an automatic NAT46 function within your phone that needs no configuration at all. A working CLAT client onboard a device means that it will work very well on an IPv6-only network. It will just work as usual.  
+
+Think of it as an automatic NAT46 function within your phone that needs no configuration at all. A working CLAT client onboard a device means that it will work very well on an IPv6-only network, even if you have hard-coded dependencies to a literal IPv4 address. It will just work as usual.  
+  
 As a regular user, you simply will not notice that you don't really have a "real" IPv4 IP _at all_. The same goes for _all_ client devices that have a CLAT client onboard, heck, even servers will work just fine. You _can_ open an IPv4 connection to an IPv4 address, even though you _don't_ have a "real" IPv4 address.  
 A regular linux client/server doesn't come with a built-in CLAT client, you'll have to install Tundra or something similar, and run them in CLAT mode (not covered here).  
 It's simple enough but it might not scale if you have embedded devices that are hard to handle. But now we're getting to the elephant in the room, and it is a big elephant:  
