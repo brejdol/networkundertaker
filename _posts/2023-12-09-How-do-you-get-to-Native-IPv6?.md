@@ -43,7 +43,7 @@ Fast-forward a couple of years. You now know your stuff. You can walk the walk, 
 * People don’t like a broken IPv6-network, or you for that matter
 * It would be grand to just use IPv6 and drop that other crap, whatever they called it
 
-**On the way to IPv6**
+**On the way to native IPv6**
 
 So, we have this little (or big) network. It has routers and firewalls, it is segmented on both L2 and L3. It contains clients, servers, users, guests, you name it. For this part, we will focus on just one network, and follow its path from IPv4 only to native IPv6 with translation to IPv4 when needed. Let me introduce you to Joe:
 
