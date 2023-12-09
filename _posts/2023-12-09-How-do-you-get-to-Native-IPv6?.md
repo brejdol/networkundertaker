@@ -78,7 +78,7 @@ You can do this in _anything_ that can handle DNS64/NAT64, and the setup will be
 
 * Make sure the rdns in the SLAAC settings,  or DNS option in DHCPv6 is pointing to the interface IP. The DNS proxy will reside here. 
 
-Create an IPv6 VIP, tick "Use Embedded", and set the external IP-range to use the last 32 bits of the address: 64:ff9b::-64:ff9b:ffff:ffff. This ensures _any_ IPv4 address in the entire address space can be mapped in this dynamic VIP. The destination side of this DNAT VIP will get the "real" IPv4 address dynamically from the DNS64 process. You don't need to touch anything else on the VIP, it is done.
+Create an IPv6 VIP, tick "Use Embedded", and set the external IP-range to use the last 32 bits of the address: 64:ff9b::-64:ff9b:ffff:ffff. This ensures _any_ IPv4 address in the entire address space can be mapped in this dynamic VIP. The destination side of this DNAT VIP will get the "real" IPv4 address dynamically from the DNS64 proxy. You don't need to touch anything else on the VIP, it is done.
 
 ![DNAT64-VIP](/DNAT64-VIP1.png)
 
