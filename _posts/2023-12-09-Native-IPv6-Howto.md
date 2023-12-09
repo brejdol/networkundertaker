@@ -76,17 +76,19 @@ You can do this in _anything_ that can handle DNS64/NAT64, and the setup will be
 
 * Make sure the rdns in the SLAAC settings,  or DNS option in DHCPv6 is pointing to the interface IP. The DNS proxy will reside here. 
 
-Create an IPv6 VIP, tick "Use Embedded", and set the external IP-range to use the last 32 bits of the address: 64:ff9b::-64:ff9b:ffff:ffff. This ensures _any_ IPv4 address in the entire address space can be mapped in this dynamic VIP. The destination side of this DNAT VIP will get the "real" IPv4 address dynamically from the DNS64 process.
+Create an IPv6 VIP, tick "Use Embedded", and set the external IP-range to use the last 32 bits of the address: 64:ff9b::-64:ff9b:ffff:ffff. This ensures _any_ IPv4 address in the entire address space can be mapped in this dynamic VIP. The destination side of this DNAT VIP will get the "real" IPv4 address dynamically from the DNS64 process. You don't need to touch anything else on the VIP, it is done.
 
 ![DNAT64-VIP](/DNAT64-VIP1.png)
 
-You already have rules for your IPv4 and your IPv6 traffic since you had dual stack running. Now, add another rule, where the src-ip is your IPv6 /64 prefix for the network, and the destination is the VIP you created. Also, create a SNAT-pool with a few IPv4 IPs that will work with your routing table. Enable NAT64:
+You already have rules for your IPv4 and your IPv6 traffic since you had dual stack running. Now, add another rule, where the src-ip is your IPv6 /64 prefix for the network, and the destination is the VIP you created. Also, create a SNAT-pool with a few IPv4 IPs that will work with your routing table. Make sure you enable NAT64 in the NAT section:
 
 ![DNAT64-Firewall-Policy](/dns64-fw-policy-snat-pool.png)
 
 This rule will make this special VIP reachable, and the traffic that hits this rule will get NAT64:ed out on one IP in the SNAT pool. For the perimenter firewall, the SNAT pool’s IPs looks like source IPs, it's just ...SNAT. 
 
+```
 _Make sure the IPs in the SNAT pool starts and ends on valid subnet boundaries, otherwise you will get unpredictible results!_
+```
 
 If everything checks out, you can now enable the DNS64 proxy in the Fortigate CLI. This turns the whole setup _ON_:
 
