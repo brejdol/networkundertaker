@@ -88,8 +88,8 @@ This rule will make this special VIP reachable, and the traffic that hits this r
 
 ```
 !!!
-Make sure the IPs in the SNAT pool starts and ends on valid subnet boundaries, 
-otherwise you will get unpredictible results!
+Make sure the IPs in the SNAT pool starts and ends on valid subnet boundaries, even though it is an IP-range! 
+Otherwise you will get unpredictible results!
 ```
 
 If everything checks out, you can now enable the DNS64 proxy in the Fortigate CLI. This turns the whole setup _ON_:
