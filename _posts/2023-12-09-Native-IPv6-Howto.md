@@ -90,6 +90,7 @@ This rule will make this special VIP reachable, and the traffic that hits this r
 !!!
 Make sure the IPs in the SNAT pool starts and ends on valid subnet boundaries! 
 Otherwise you will get unpredictible results!
+!!!
 ```
 
 If everything checks out, you can now enable the DNS64 proxy in the Fortigate CLI.  
@@ -112,9 +113,11 @@ The DHCPv4 option set is just additional metadata that will be sent to the clien
 As you see, I did turn off IPv4 for 4,294,967,296 seconds. Because I could. Any value slightly over your dhcpv4 lease-time would be fine. 
 
 ```
-Make a memory note of the importance of blocking dhcp acks/servers on client-facing areas if you don’t already do that,  
-since option 108 would be a great way to DoS an IPv4 network without anyone understanding what happens.  
+!!!
+Make a memory note of the importance of blocking dhcp acks/servers on client-facing ports.
+Option 108 is great way to DoS an IPv4 network without anyone understanding what happens.  
 You would have to use Wireshark in order to actually _see_ the option being set.
+!!!
 ```
 
 If you set this option and reconnect to the network, and then check your IP on your iPhone, you will see something weird after a few seconds (pardon the swedish):
