@@ -49,7 +49,7 @@ So, we have this little (or big) network. It has routers and firewalls, it is se
 
 ![Joe-IPv4](/joe-ipv4-1.png)
 
-Joe is a very pale guy that turns kinda blueish in the winter. He just got a new cellphone, the mighty iPhone 92 Super MAX. It weighs 200 pounds. He connects it to the office wireless network for phones, using an unknown authentication method. He checks his flight to Vegas, reads the DM his daughter sent him on Instagram, and proceeds with the rest of his day. 
+Joe is a very pale guy that turns kinda blueish in the wintertime. He just got a new cellphone, the mighty iPhone 902 Super MAX. It weighs 200 pounds. He connects it to the office wireless network for phones, using an unknown authentication method. He checks his flight to Vegas, reads the DM his daughter sent him on Instagram, and proceeds with the rest of his day. 
 The network resides in the company's internal firewall, which provides him with an IP/DNS via DHCPv4. The internal firewall has a default route to the perimeter firewall. The perimeter firewall has a default route to the ISP's router. The perimeter firewall does SNAT which translates Joe's internal 172.18.142.x IP to a public IP, and off he goes onto the internet. So far so good.
 
 We now rewind the tape and start over. It's the same blue Joe, with the same very heavy phone. But this time, the networking slaves in his company managed to type in the correct IPv6 IP on the interface, and setup the firewall rules, routing and DNS for IPv6:
