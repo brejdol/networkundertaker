@@ -1,4 +1,5 @@
 **Introduction**
+
 I have run an IPv6-only PoC-network for 15 months, testing out how different clients and operating systems works, and thought I should share my findings. There are a lot of articles about IPv6 out there, but few with that walks you through the entire process from native IPv4, via dual stack all the way to the goal: 
 
 * A native IPv6 network that transparently translates traffic to legacy IPv4 destinations on the fly when needed. 
@@ -12,6 +13,7 @@ This write-up assumes that the reader has a basic understanding of IPv6-specific
 _(TLDR; Native IPv6 works fine for a vast majority of the existing clients and servers out there, with a minimum of manual actions client-side, but sadly the Windows environment still (as of dec. 2023) lacks an important piece of the puzzle.)_ 
 
 **Background**
+
 I might not be at the top of everyone's mind, but let’s start with where we want to be with our IP addressing. IPv6 has been around for around twenty years. It is the successor of IPv4, for better or worse, like it or not. It really is what we should deploy and use everywhere. But we don’t. We rewrite packet headers instead, sometimes many times in a row between a source and the destination in order to handle IP clashes, or addresses that simply are unroutable on the internet (i.e: addresses out of CGNAT-scope, RFC1918 etc). However, that _usually_ works fine. NAT has saved more butts than pants. I for sure know that my butt would have been on the line many times without it. NAT is a splendid tool, the ”duct tape” of networking that holds everything together. Or is it? The problem is that we sorta maneuvered into a global situation where NAT is the _only_ readily available solution to an endless amount of addressing issues - In the enterprise, in the wan, in the cloud. There isn’t enough IPv4 addresses to provide end to end connectivity everywhere to everyone. The base intent of the internet failed just a few months in when it was made public. It was _obvious_ that this wouldn't scale for long, something had to be done. In 1994, the first year modems were readily available for the home users here in Sweden, we saw the humble beginnings of NAT - Which by the way _isn’t_ a swiss army knife of networking, it exists solely because of the global issue with usable address-space - Addresses had to be saved. No one had enough addresses, not even the entire world. NAT is a tool, just like a hammer. But a lack of enough addresses isn't "nails".
 
 _Is this really where we want to be with our addressing?_
@@ -121,7 +123,7 @@ He's doing alright, but his arm is swollen, and his back hurts. He hasn't notice
 
 It is here, the cell providers already use it, you can use it too. IPv6-only networks that is. Totally up to you if it is worth it, or even interesting. But take note, change is coming: I myself have clients with branch offices in Asia that will lose their IPv4 connectivity during 2024. Yes, this is true, ISP:s in primarily China and India is actually dropping IPv4 totally, not even "just" raising prices. If you want IPv4 connectivity there, you'll have to tunnel over IPv6. Regardless of your own feelings regarding IPv6 - It is here to stay, you will have to deal with it sooner or later. Be the master of your own fate. Besides that, it's actually fun.
 
-**NIfty Links if you want to know more:**
+**Nifty Links if you want to know more:**
 
 The only book you need to have regarding IPv6 addressing: https://www.amazon.com/IPv6-Address-Planning-Designing-Future/dp/1491902760
 
