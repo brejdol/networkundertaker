@@ -157,16 +157,17 @@ Regardless of your own feelings regarding IPv6 - It is here to stay, you will ha
 
 **Nifty Links if you want to know more:**
 
-[The only book you need to have regarding IPv6 addressing](https://www.amazon.com/IPv6-Address-Planning-Designing-Future/dp/1491902760)  
+The only book you need to have regarding IPv6 addressing:  
+["IPv6 Address Planning" by Tom Coffeen](https://www.amazon.com/IPv6-Address-Planning-Designing-Future/dp/1491902760)  
 
-Check out IPv6 Buzz over at Packet Pushers. It is an amazing podcast featuring Tom Coffeen (the author of the book above), Scott Hogg, and Ed Horley - Three of the most knowledgeable people in the world regarding IPv6.  
+Check out IPv6 Buzz over at Packet Pushers. It is an amazing podcast featuring Tom Coffeen (yes, the very author of the book above), Scott Hogg, and Ed Horley - Three of the most knowledgeable people in the world regarding IPv6.  
 There is a brand new episode that is all about exactly the above, check it out:  
 
-[IPv6 CLAT and IPv6-only networks](https://packetpushers.net/podcast/ipb140-ipv6-clat-and-ipv6-only-networks/)  
+[IPv6 Buzz: IPv6 CLAT and IPv6-only networks](https://packetpushers.net/podcast/ipb140-ipv6-clat-and-ipv6-only-networks/)  
 
 [NAT64/DNS64 in a Fortigate](https://docs.fortinet.com/document/fortigate/7.4.1/administration-guide/443324/nat64-policy-and-dns64-dns-proxy)  
 
-[464XLAT](https://tools.ietf.org/html/rfc6877]  
+[464XLAT](https://tools.ietf.org/html/rfc6877)  
 
 [NAT64/DNS64 deployment](https://datatracker.ietf.org/doc/html/rfc8683)
 
@@ -178,4 +179,4 @@ There is a brand new episode that is all about exactly the above, check it out:
 
 [Deploying IPv6-only networks](https://labs.ripe.net/author/ondrej_caletka_1/deploying-ipv6-mostly-access-networks/)
 
-[Start page]({{ '/' | absolute_url }})
+[The Network Undertaker - Start page]({{ '/' | absolute_url }})
