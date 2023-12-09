@@ -145,13 +145,22 @@ What does this mean then? Well, it means a fairly updated device (from OSX 13 an
 This functionality is a "helper" for applications that need a literal IPv4 IP on the phone itself - For example when pinging an IPv4 IP from the phone, or using a legacy app that _only_ can use an IPv4 address (which isn't really gonna happen due to the fact that Apple forced all apps in appstore to support native IPv6 since 2010-ish).  
 
 Think of it as an automatic NAT46 function within your phone that needs no configuration at all. A working CLAT client onboard a device means that it will work very well on an IPv6-only network, even if you have hard-coded dependencies to a literal IPv4 address. It will just work as usual.  
-  
-As a regular user, you simply will not notice that you don't really have a "real" IPv4 IP _at all_. The same goes for _all_ client devices that have a CLAT client onboard, heck, even servers will work just fine. You _can_ open an IPv4 connection to an IPv4 address, even though you _don't_ have a "real" IPv4 address.  
-A regular linux client/server doesn't come with a built-in CLAT client, you'll have to install Tundra or something similar, and run them in CLAT mode (not covered here).  
-It's simple enough but it might not scale if you have embedded devices that are hard to handle. But now we're getting to the elephant in the room, and it is a big elephant:  
 
-The Windows suite of operating systems doesn't have a working implementation of CLAT that can be used on wired/wireless interfaces as of today (dec. 2023). I don't know of any tools that can fix this either. To be honest I haven't checked for 3rd party tools for this, since this _should_ be handled in the OS in my opinion. The irony in this is that Windows actually _has_ a CLAT client, but it can as far as I understand it only be used on WWAN type interfaces.  
-This is pretty unfortunate given the amount of Windows clients/servers that are out there. As of now, there is nothing else to do but wait for this to be enabled by default on windows. Or at least give us an ON/OFF button for it? When this finds its way into windows, we're talking. But back to our pale blue friend Joe. How is he doing?  
+As a regular user, you simply will not notice that you don't really have a "real" IPv4 IP _at all_. The same goes for _all_ client devices that have a CLAT client onboard, heck, even servers will work just fine. You _can_ open an IPv4 socket to an IPv4 destination, even though you _don't_ have a "real" IPv4 address.  
+
+A regular linux client/server doesn't come with a built-in CLAT client, you'll have to install Tundra or something similar, and run them in CLAT mode (not covered here).  
+It's simple enough but it might not scale if you have embedded devices that are hard to handle.  
+
+But now we're getting to the elephant in the room, and it is a very big elephant:  
+
+The Windows suite of operating systems doesn't have a working implementation of CLAT that can be used on wired/wireless interfaces as of today (dec. 2023). I don't know of any tools that can fix this either. To be honest I haven't checked for 3rd party tools for this, since this _should_ be handled in the OS in my opinion.  
+The irony in this is that Windows actually _has_ a CLAT client, but it can as far as I understand it only be used on WWAN type interfaces.  
+
+This is pretty unfortunate given the amount of Windows clients/servers that are out there. As of now, there is nothing else to do but wait for CLAT to be available for regular wireless/wired interfaces on windows.  
+
+Why not an ON/OFF button for it? When this finds its way into windows, we're talking. But not much we can do about it right now.  
+
+But back to our pale blue friend Joe. How is he doing?    
 
 He's doing alright, but his arm is swollen, and his back hurts. He hasn't noticed any difference in how his phone works, even though he is on an IPv6-only network:
 
