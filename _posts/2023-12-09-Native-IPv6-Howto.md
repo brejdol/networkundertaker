@@ -92,7 +92,8 @@ Make sure the IPs in the SNAT pool starts and ends on valid subnet boundaries, e
 Otherwise you will get unpredictible results!
 ```
 
-If everything checks out, you can now enable the DNS64 proxy in the Fortigate CLI. This turns the whole setup _ON_:
+If everything checks out, you can now enable the DNS64 proxy in the Fortigate CLI. 
+This turns the whole setup _ON_:
 
 ![Enable-DNS64](/enable-dns64.png)
 
