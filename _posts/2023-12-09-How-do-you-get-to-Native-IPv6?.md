@@ -65,7 +65,7 @@ Besides that, the slaves just noticed that dual stack means twice the work.
 
 NAT64 does what is says - It translates IPv6 addresses to IPv4 addresses. DNS64 is another beast entirely. It is a DNS proxy that looks at all DNS queries from the clients, and when an IPv6-only client tries to reach a fqdn that doesn't have a valid AAAA record, the DNS64 proxy will create an AAAA DNS record from the A record, and it will map this record to an IPv6 IP. 
 
-There is a reserved, "well-known" IPv6 prefix that can be used for this translation: 64:ff9b::/96. A /96 prefix leaves 32-bits for addresses, and that is what we need - The entire IPv4 address space from 0.0.0.0-->255.255.255.255 fits there. 
+There is a reserved, "well-known" IPv6 prefix that can be used for this translation: 64:ff9b::/96. A /96 prefix leaves 32-bits for hosts, and that is what we need - The entire IPv4 address space from 0.0.0.0-->255.255.255.255 fits there. 
 So, the end of this IPv6 address will look like this: 64:ff9b::(ipv4-address-in-hex). Traffic to this mock AAAA record/IP will then be translated into an IPv4 address with NAT64 and then follow the IPv4 path to the destination. This whole process adds a few milliseconds on all lookups, but it isn't really noticable, it doesn't feel sluggish at all, at least not in my setup.
 
 **How it is done in a Fortigate firewall**
