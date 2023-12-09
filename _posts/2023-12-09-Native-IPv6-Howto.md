@@ -99,7 +99,7 @@ This turns the whole setup _ON_:
 
 If you enable "always-synthesize-aaaa-record", the DNS64 proxy will do this for _everything_, regardless of an AAAA record exists or not. This is unnecessary in our setup.
 
-You now no longer use IPv4 for anything that has a DNS entry, since the Fortigate will generate AAAA-records out of the A-records and then map that AAAA to a 64:ff9b::xxxx address, and then do NAT64 on that traffic. 
+You now no longer use IPv4 for anything that has a DNS entry, since the Fortigate will generate AAAA-records out of the A-records and then map that AAAA to a 64:ff9b::xxxx address, and then do NAT64 on that traffic on the way out. 
 
 But you are still dual stacked, you still have an IPv4 address, don't you? That _can_ be awfully handy sometimes, especially if you want to open an IPv4 socket to something that has an IPv4 address, but no DNS record. If you're a networking person, you'd might like to be able to _ping_ an IPv4 address for example. But now, let's up the ante. We’re not here to stay in the safe zone. 
 
@@ -109,7 +109,13 @@ The DHCPv4 option set is just additional metadata that will be sent to the clien
 
 ![DHCP-Option-108](/dhcp-option-108.png)
 
-As you see, I did turn off IPv4 for 4,294,967,296 seconds. Because I could. Any value slightly over your dhcpv4 lease-time would be fine. Make a memory note of the importance of blocking dhcp acks/servers on client-facing areas if you don’t already do that, since option 108 would be a great way to DoS an IPv4 network without anyone understanding what happens. You would have to use Wireshark in order to actually _see_ the option being set.
+As you see, I did turn off IPv4 for 4,294,967,296 seconds. Because I could. Any value slightly over your dhcpv4 lease-time would be fine. 
+
+```
+Make a memory note of the importance of blocking dhcp acks/servers on client-facing areas if you don’t already do that,  
+since option 108 would be a great way to DoS an IPv4 network without anyone understanding what happens.  
+You would have to use Wireshark in order to actually _see_ the option being set.
+```
 
 If you set this option and reconnect to the network, and then check your IP on your iPhone, you will see something weird after a few seconds (pardon the swedish):
 
