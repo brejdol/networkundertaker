@@ -54,7 +54,7 @@ The network resides in the company's internal firewall, which provides him with 
 
 We now rewind the tape and start over. It's the same blue Joe, with the same very heavy phone. But this time, the networking slaves in his company managed to type in the correct IPv6 IP on the interface, and setup the firewall rules, routing and DNS for IPv6:
 
-![Joe-Dual-Stack](/joe-dual-stack.png)
+![Joe-Dual-Stack](/joe-dual-stack1.png)
 
 This time, Joe gets the same IPv4 address and DNS via DHCPv4, but he also gets an IPv6 GUA address (documentation prefix in this example) and a RDNSS (company DNS server) via SLAAC. He checks his flight to Vegas, and since the airline company web page doesn't have an AAAA DNS record, only an A record, this traffic follow the above IPv4 path exactly. He then checks the DM his daughter sent him on Instagram, and since Instagram is reachable over IPv6 with a AAAA record, his very heavy phone opens an IPv6 connection to the IPv6 IP it got from the local resolver. The traffic follows the default route from the internal firewall, via the default route in the perimeter firewall and onwards. No NAT is performed because it isn't needed. End-to-end connectivety. And all OS:es prefer IPv6 _if_ they have an IPv6 address. 
 
