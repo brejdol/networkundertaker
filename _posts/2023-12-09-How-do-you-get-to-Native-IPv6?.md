@@ -151,9 +151,10 @@ He's doing alright, but his arm is swollen, and his back hurts. He hasn't notice
 
 **Conclusion**
 
-It is here, the cell providers already use it, you can use it too. IPv6-only networks that is. Totally up to you if it is worth it, or even interesting. But take note, change is coming:  
-I myself have clients with branch offices in Asia that will lose their IPv4 connectivity during 2024. Yes, this is true, ISP:s in primarily China and India is actually dropping IPv4 totally, not even "just" raising prices. If you want IPv4 connectivity there, you'll have to tunnel over IPv6.  
-Regardless of your own feelings regarding IPv6 - It is here to stay, you will have to deal with it sooner or later. Be the master of your own fate. Besides that, it's actually fun.  
+It is here, the cell providers already use it, you can use it too. IPv6-only networks that is. Totally up to you if it is worth it, or even interesting for your specific user cases. But take note, change is coming:  
+I myself have clients with branch offices in Asia that will lose their IPv4 connectivity during 2024. Yes, this is true, ISP:s in primarily China and India is actually dropping IPv4 to their paying customers.  
+If you want IPv4 connectivity there, you'll have to tunnel over IPv6.  
+Regardless of your own feelings regarding IPv6 - It is here to stay, you will have to deal with it sooner or later. Be the master of your own fate. Besides that, it's actually pretty fun.  
 
 **Nifty Links if you want to know more:**
 
