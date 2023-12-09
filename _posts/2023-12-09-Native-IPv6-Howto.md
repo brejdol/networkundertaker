@@ -8,7 +8,7 @@ I have run an IPv6-only PoC-network for 15 months, testing out how different cli
 
 Legacy applications that need a literal IPv4 address on the client are still plentiful in the enterprise and in OT environments, and they will not go away anytime soon. If you have such dependencies that need to be handled _manually_ on every unit, this will be hard, it's as simple as that. If you have 10 units, that will work, but not if you have 10.000. It _might not_ be possible/feasable to deploy IPv6 _at all_ in certain networks. This is how it goes. If it will not work at scale, why bother? Draw your own conclusions. Keep it real. And read on.
 
-This write-up assumes that the reader has a basic understanding of IPv6-specific techniques as well as IP addressing and routing in general. A collection of links for those who want to know more is provided at the bottom of this page.
+This write-up assumes that the reader has a basic understanding of IPv6 as well as DNS/DHCP, DNAT/SNAT and routing in general. A collection of links for those who want to know more is provided at the bottom of this page.
 
 _(TLDR; Native IPv6 works fine for a vast majority of the existing clients and servers out there, with a minimum of manual actions client-side, but sadly the Windows environment still (as of dec. 2023) lacks an important piece of the puzzle that _might_ be a deal-breaker.)_ 
 
