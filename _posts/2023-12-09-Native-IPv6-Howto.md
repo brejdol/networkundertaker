@@ -1,16 +1,16 @@
 **Introduction**
 
-I have run an IPv6-only PoC-network for 15 months, testing out how different clients and operating systems works, and thought I should share my findings. There are a lot of articles about IPv6 out there, but few with that walks you through the entire process from native IPv4, via dual stack all the way to the goal: 
+I have run an IPv6-only PoC-network for 15 months, testing out how different clients and operating systems works, and thought I should share my findings. There are a lot of articles about IPv6 out there, but few that walks you through the entire process from native IPv4, via dual stack all the way to the goal: 
 
 * A native IPv6 network that transparently translates traffic to legacy IPv4 destinations on the fly when needed. 
 * A native IPv6 network that automatically can handle legacy applications that need native IPv4. 
 * A native IPv6 network that just works, regardless of what you do or work with. Ideally, you wouldn't even know you're using it. 
 
-Legacy applications that need a literal IPv4 address on the client are still plentiful in the enterprise and in OT environments, and they will not go away anytime soon. If you have such dependencies that need to be handled _manually_ on every unit, it will be hard, it's as simple as that. If you have 10 units, that will work, but not if you have 10.000. This is the biggest hurdle. It _might not be possible/feasable_ to deploy IPv6 _at all_ in certain networks. This is how it goes. If it will not work, why bother? Draw your own conclusions. Keep it real. And read on.
+Legacy applications that need a literal IPv4 address on the client are still plentiful in the enterprise and in OT environments, and they will not go away anytime soon. If you have such dependencies that need to be handled _manually_ on every unit, this will be hard, it's as simple as that. If you have 10 units, that will work, but not if you have 10.000. It _might not_ be possible/feasable to deploy IPv6 _at all_ in certain networks. This is how it goes. If it will not work at scale, why bother? Draw your own conclusions. Keep it real. And read on.
 
-This write-up assumes that the reader has a basic understanding of IPv6-specific techniques, IP addressing and routing in general. A collection of links for those who want to know more is provided at the bottom of this page.
+This write-up assumes that the reader has a basic understanding of IPv6-specific techniques as well as IP addressing and routing in general. A collection of links for those who want to know more is provided at the bottom of this page.
 
-_(TLDR; Native IPv6 works fine for a vast majority of the existing clients and servers out there, with a minimum of manual actions client-side, but sadly the Windows environment still (as of dec. 2023) lacks an important piece of the puzzle.)_ 
+_(TLDR; Native IPv6 works fine for a vast majority of the existing clients and servers out there, with a minimum of manual actions client-side, but sadly the Windows environment still (as of dec. 2023) lacks an important piece of the puzzle that _might_ be a deal-breaker.)_ 
 
 **Background**
 
