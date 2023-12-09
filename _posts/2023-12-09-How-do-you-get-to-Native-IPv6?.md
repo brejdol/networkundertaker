@@ -162,7 +162,7 @@ Regardless of your own feelings regarding IPv6 - It is here to stay, you will ha
 
 **Nifty Links if you want to know more:**
 
-Check out IPv6 Buzz over at Packet Pushers. It is an amazing podcast featuring Tom Coffeen (yes, the very author of the book above), Scott Hogg, and Ed Horley - Three of the most knowledgeable people in the world regarding IPv6.  
+Check out IPv6 Buzz over at Packet Pushers. It is an amazing podcast featuring Tom Coffeen (yes, the very author of the book below), Scott Hogg, and Ed Horley - Three of the most knowledgeable people in the world regarding IPv6.  
 There is a brand new episode that is all about exactly the above, check it out:  
 [IPv6 Buzz: IPv6 CLAT and IPv6-only networks](https://packetpushers.net/podcast/ipb140-ipv6-clat-and-ipv6-only-networks/)  
 
