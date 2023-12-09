@@ -167,7 +167,7 @@ There is a brand new episode that is all about exactly the above, check it out:
 
 [IPv6 Buzz: IPv6 CLAT and IPv6-only networks](https://packetpushers.net/podcast/ipb140-ipv6-clat-and-ipv6-only-networks/)  
 
-The only book you need to have regarding IPv6 addressing:["IPv6 Address Planning" by Tom Coffeen](https://www.amazon.com/IPv6-Address-Planning-Designing-Future/dp/1491902760)  
+The _only_ book you need regarding IPv6 addressing:[IPv6 Address Planning, by Tom Coffeen](https://www.amazon.com/IPv6-Address-Planning-Designing-Future/dp/1491902760)  
 
 [NAT64/DNS64 in a Fortigate](https://docs.fortinet.com/document/fortigate/7.4.1/administration-guide/443324/nat64-policy-and-dns64-dns-proxy)  
 
