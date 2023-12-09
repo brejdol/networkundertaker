@@ -176,7 +176,9 @@ If you want IPv4 connectivity there, you'll have to tunnel over IPv6.
 
 During my 15 months of testing, I have tried many operating systems: - Linux, FreeBSD, iOS, OSX, Windows, Android/Chromebook. It really is a pity Windows doesn't work with CLAT. But please note: For clients that doesn't need the emulated IPv4 connectivity that CLAT/464XLAT gives - It will work just fine with NAT64/DNS64.  
 
-Still, I would like to have CLAT onboard before any big deployment of IPv6-only networks. Windows _has_ to be onboard with the rest!  
+Still, I would like to have CLAT onboard before any big deployment of IPv6-only networks.  
+
+_Windows simply has to be onboard with the rest!_  
 
 Regardless of your own feelings regarding IPv6 - It is here to stay, you will have to deal with it sooner or later. Be the master of your own fate. Besides that, it's actually pretty fun.  
 
