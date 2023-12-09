@@ -139,7 +139,7 @@ What does this mean then? Well, it means a fairly updated device (from OSX 13 an
 This functionality is a "helper" for applications that need a literal IPv4 IP on the phone itself - For example when pinging an IPv4 IP from the phone, or using a legacy app that _only_ can use an IPv4 address (which isn't really gonna happen due to the fact that Apple forced all apps in appstore to support native IPv6 since 2010-ish).  
 Think of it as an automatic NAT46 function within your phone that needs no configuration at all. A working CLAT client onboard a device means that it will work very well on an IPv6-only network. It will just work as usual.  
 As a regular user, you simply will not notice that you don't really have a "real" IPv4 IP _at all_. The same goes for _all_ client devices that have a CLAT client onboard, heck, even servers will work just fine. You _can_ open an IPv4 connection to an IPv4 address, even though you _don't_ have a "real" IPv4 address.  
-A regular linux client/server doesn't come with a built-in CLAT client, you'll have to install Tundra/Tayga or something similar, and run them in CLAT mode.  
+A regular linux client/server doesn't come with a built-in CLAT client, you'll have to install Tundra or something similar, and run them in CLAT mode (not covered here).  
 It's simple enough but it might not scale if you have embedded devices that are hard to handle. But now we're getting to the elephant in the room, and it is a big elephant:  
 
 The Windows suite of operating systems doesn't have a working implementation of CLAT that can be used on wired/wireless interfaces as of today (dec. 2023). I don't know of any tools that can fix this either. To be honest I haven't checked for 3rd party tools for this, since this _should_ be handled in the OS in my opinion. The irony in this is that Windows actually _has_ a CLAT client, but it can as far as I understand it only be used on WWAN type interfaces.  
@@ -155,6 +155,7 @@ It is here, the cell providers already use it, you can use it too. IPv6-only net
 I myself have clients with branch offices in Asia that will lose their IPv4 connectivity during 2024. Yes, this is true, ISP:s in primarily China and India is actually dropping IPv4 to their paying customers.  
 If you want IPv4 connectivity there, you'll have to tunnel over IPv6.  
 Regardless of your own feelings regarding IPv6 - It is here to stay, you will have to deal with it sooner or later. Be the master of your own fate. Besides that, it's actually pretty fun.  
+During my 15 months of testing, I have tried all operating systems
 
 **Nifty Links if you want to know more:**
 
@@ -178,6 +179,8 @@ There is a brand new episode that is all about exactly the above, check it out:
 
 [PREF64](https://datatracker.ietf.org/doc/html/rfc8781)
 
-[Deploying IPv6-only networks](https://labs.ripe.net/author/ondrej_caletka_1/deploying-ipv6-mostly-access-networks/)
+[Deploying IPv6-only networks](https://labs.ripe.net/author/ondrej_caletka_1/deploying-ipv6-mostly-access-networks/)  
+
+[Tundra NAT64/DNS64](https://github.com/vitlabuda/tundra-nat64)
 
 [The Network Undertaker - Start page]({{ '/' | absolute_url }})
