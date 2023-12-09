@@ -20,11 +20,11 @@ Or is it? The problem is that we sorta maneuvered into a global situation where 
 
 In 1994, the first year modems were readily available for the home users here in Sweden, we saw the humble beginnings of NAT - Which by the way _isn’t_ a swiss army knife of networking, it exists solely because of the global issue with usable address-space. Addresses had to be saved. No one had enough addresses, not even the entire world. NAT is a tool, just like a hammer. But a lack of enough addresses isn't "nails".
 
-**_Is this really where we want to be with our addressing?_**
+_Is this really where we want to be with our addressing?_
 
 A more apt question might be:
 
-**_Is this where we want to stay with our addressing forever?_**
+_Is this where we want to stay with our addressing forever?_
 
 It sure seems that way, at least sometimes. But what if it's possible to do it the opposite way - Where IPv6 is the new default, end to end, and where IPv4 is the oddity, the exception, the old address space you’ll translate _to_ when you need to? Where IPv4 really _is_ legacy IP, there as a reminder of the errors made by an earlier generation that couldn't count high enough. It is _very_ possible to get there, today even.
 
