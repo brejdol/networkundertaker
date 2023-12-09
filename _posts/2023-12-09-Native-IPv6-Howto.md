@@ -31,14 +31,14 @@ It sure seems that way, at least sometimes. But what if it's possible to do it t
 Where IPv4 really _is_ legacy IP, there as a reminder of the errors made by an earlier generation that couldn't count high enough. 
 It is _very_ possible to get there, today even.
 
-**Getting to it - The acceptancy part**
+**Getting to it - Acceptancy**
 
 Ok, let’s say you accepted your fate as a person in networking - You understand that IPv6 eventually will be of importance, so you learn how it works. You learn to count and make sense of hextets instead of octets. You see that everything (almost) works very much like v4 regarding routing. (”Nice, I totally get this!”) All the crazy stuff seems to happen on the local link (”Hey why on earth do I have like three different addresses on the same interface?!”). 
 
 Fast-forward a couple of years. You now know your stuff. You can walk the walk, and talk the talk.  You can subnet into /63 and /71 without missing a beat, and you understand why you never should. Hurricane Electric thinks you are an IPv6 Sage. You test stuff. You do mistakes, and you fix them. You make certain observations regarding IPv6:
 
 * You finally have all the addresses you will need for the forseeable future.
-* End-to-end connectivity means your pipes are ... straighter? It feels that way at least.
+* End-to-end connectivity means your pipes are ... straighter? It sure feels that way at least.
 * Dual stack can really be twice the work or more to maintain, rule/routing-wise.  
 * People don’t like a broken IPv6-network, or you for that matter
 * It would be grand to just use IPv6 and drop that other crap, whatever they called it
@@ -47,7 +47,7 @@ Fast-forward a couple of years. You now know your stuff. You can walk the walk, 
 
 So, we have this little (or big) network. It has routers and firewalls, it is segmented on both L2 and L3. It contains clients, servers, users, guests, you name it. For this part, we will focus on just one network, and follow its path from IPv4 only to native IPv6 with translation to IPv4 when needed. Let me introduce you to Joe:
 
-![Joe-IPv4](/joe-ipv4.png)
+![Joe-IPv4](/joe-ipv4-1.png)
 
 Joe is a very pale guy that turns kinda blueish in the winter. He just got a new work cellphone, the mighty iPhone 92 Super MAX. It weighs 200 pounds. He connects it to the office wireless network for phones, using a to us unknown authentication method, checks his flight to Vegas, reads the DM his daughter sent him on Instagram, and proceeds with the rest of his day. 
 The network resides in the company's internal firewall, which provides him with an IP/DNS via DHCPv4. The internal firewall has a default route to the perimeter firewall. The perimeter firewall has a default route to the ISP's router. The perimeter firewall does SNAT which translates Joe's internal 172.18.142.x IP to a public IP, and off he goes onto the internet. So far so good.
