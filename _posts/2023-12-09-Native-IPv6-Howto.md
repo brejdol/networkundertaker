@@ -16,14 +16,15 @@ This write-up assumes that the reader has a basic understanding of IPv6 as well 
 
 It might not be at the top of everyone's mind, but let’s start with where we want to be with our IP addressing. IPv6 has been around for around twenty years. It is the successor of IPv4, for better or worse, like it or not. It really is what we should deploy and use everywhere. But we don’t. We rewrite packet headers instead, sometimes many times in a row between a source and the destination in order to handle IP clashes, or addresses that simply are unroutable on the internet (i.e: addresses out of CGNAT-scope, RFC1918 etc). However, that _usually_ works fine. NAT has saved more butts than pants. I for sure know that my butt would have been on the line many times without it. NAT is a splendid tool, the ”duct tape” of networking that holds everything together. 
 
-Or is it? The problem is that we sorta maneuvered into a global situation where NAT is the _only_ readily available solution to an endless amount of addressing issues - In the enterprise, in the wan, in the cloud. There isn’t enough IPv4 addresses to provide end to end connectivity everywhere to everyone. The base intent of the internet failed just a few months in when it was made public. It was _obvious_ that this wouldn't scale for long, something had to be done. 
+Or is it? The problem is that we sorta maneuvered into a global situation where NAT is the _only_ readily available solution to an endless amount of addressing issues - In the enterprise, in the wan, in the cloud. There isn’t enough IPv4 addresses to provide end-to-end connectivity everywhere to everyone. The base intent of the internet failed just a few months in when it was made public. It was _obvious_ that this wouldn't scale for long, something had to be done. 
 
-In 1994, the first year modems were readily available for the home users here in Sweden, we saw the humble beginnings of NAT - Which by the way _isn’t_ a swiss army knife of networking, it exists solely because of the global issue with usable address-space - Addresses had to be saved. No one had enough addresses, not even the entire world. NAT is a tool, just like a hammer. But a lack of enough addresses isn't "nails".
+In 1994, the first year modems were readily available for the home users here in Sweden, we saw the humble beginnings of NAT - Which by the way _isn’t_ a swiss army knife of networking, it exists solely because of the global issue with usable address-space. Addresses had to be saved. No one had enough addresses, not even the entire world. NAT is a tool, just like a hammer. But a lack of enough addresses isn't "nails".
 
-_Is this really where we want to be with our addressing?_
+**_Is this really where we want to be with our addressing?_**
 
 A more apt question might be:
-Is this where we want to _stay_ with our addressing forever?
+
+**_Is this where we want to stay with our addressing forever?_**
 
 It sure seems that way, at least sometimes. But what if it's possible to do it the opposite way - Where IPv6 is the new default, end to end, and where IPv4 is the oddity, the exception, the old address space you’ll translate _to_ in order to reach them? Where IPv4 really _is_ Legacy IP, there as a reminder of the errors made by an earlier generation that couldn't count high enough. It is _very_ possible to get there, today even.
 
