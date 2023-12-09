@@ -6,7 +6,7 @@
 * A native IPv6 network that automatically can handle legacy applications that need native IPv4. 
 * A native IPv6 network that just works, regardless of what you do or work with. Ideally, you wouldn't even know you're using it. 
 
-Legacy applications that need a literal IPv4 address on the client are still plentiful in the enterprise and in OT environments, and they will not go away anytime soon. If you have such dependencies that need to be handled _manually_ on every unit, this will be hard if no automation exists, it's as simple as that. If you have 10 units, it will work, but not if you have 10.000. It _might not_ be possible/feasable to deploy IPv6 _at all_ in certain networks. This is how it goes. If it will not work at scale, why bother? Draw your own conclusions. Keep it real. And read on.
+Legacy applications that need a literal IPv4 address on the client are still plentiful in the enterprise and in OT environments, and they will not go away anytime soon. If you have such dependencies that need to be handled _manually_ on every unit, this will be hard if no automation exists, it's as simple as that. If you have 10 units, it will work, but not if you have 10.000. It _might not_ be possible/feasable to deploy IPv6 _at all_ in certain networks. Embedded devices might be hard-coded for example. This is how it goes. If it will not work at scale, why bother? Draw your own conclusions. Keep it real. And read on.
 
 This write-up assumes that the reader has a basic understanding of IPv6 as well as DNS/DHCP, DNAT/SNAT and routing in general. A collection of links for those who want to know more is provided at the bottom of this page.
 
