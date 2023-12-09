@@ -123,7 +123,7 @@ You would have to use Wireshark in order to actually _see_ the option at play.
 
 If you set this option and reconnect to the network, and then check your IP on your iPhone, you will see something weird after a few seconds (pardon the swedish):
 
-![iPhone-IPv4-CLAT](/iphone-ipv4CLAT.png)
+![iPhone-IPv4-CLAT](/iphone-ipv4CLAT1.png)
 
 You see that you've grabbed 2 IPv6 IPs - That's good and well. But your IPv4 address lines will be empty for a few seconds, then they will be populated with a weird IP/mask and gateway that you haven't set. You haven't set anything, you just turned IPv4 off, didn't you? Yeah, you did. Usually, a client that doesn’t get a DHCP lease within 20-30 seconds will hand itself an APIPA address (169.254.x.x) in order to at least have some address on the local link. But in our case, we actually _did_ get an IPv4 address from the DHCP server, albeight with the option 108 that ordered us to shut down IPv4 at the same time. This is something else. 
 
