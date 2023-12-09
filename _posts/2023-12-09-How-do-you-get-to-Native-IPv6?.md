@@ -109,26 +109,27 @@ But you are still dual stacked, you still have an IPv4 address, don't you? That 
 
 **DHCPv4 option 108**
 
-The DHCPv4 option set is just additional metadata that will be sent to the client together with the IP address. You can inform about DNS, gateway, NTP-server, vendor specific options etc etc. Option 108 is not widely known though, and it is rarely used. What does it do? Well, it tells the client that just received an IPv4 address, to _turn off IPv4_ for (value in hex) seconds. Yes, that's right. This option exists for this specific setup where you really want to make sure that the client _doesn't_ have an IPv4 address _at all_. But we're good to go. Let's set it:
+The DHCPv4 option set is really just additional metadata that will be sent to the client together with the IP address. You can inform about DNS, gateway, NTP-server, vendor specific options etc etc. Option 108 is not widely known though, and it is rarely used. What does it do? Well, it tells the client that just received an IPv4 address, to _turn off IPv4_ for (value in hex) seconds. Yes, that's right. This option exists for this specific setup where you really want to make sure that the client _doesn't_ have an IPv4 address _at all_. But we're good to go. Let's set it:
 
 ![DHCP-Option-108](/dhcp-option-108.png)
 
-As you see, I did turn off IPv4 for 4,294,967,296 seconds. Because I could. Any value slightly over your dhcpv4 lease-time would be fine. 
+As you see, I did turn off IPv4 for 4,294,967,296 seconds. Because I could. Any value slightly over your dhcpv4 lease-time would be fine though. 
 
 ```
 !!!
 Make a memory note of the importance of always blocking dhcp acks/servers on client-facing ports.
 Option 108 is great way to DoS an IPv4 network without anyone understanding what happens. 
-Clients will not renew their IPs unless network is restarted on them. 
-You would have to use Wireshark in order to actually _see_ the option at play.
+Clients will not renew their IPs unless the network is turned off/on on them. 
+You would have to use Wireshark in order to actually see the option at play.
 !!!
 ```
 
-If you set this option and reconnect to the network, and then check your IP on your iPhone, you will see something weird after a few seconds (pardon the swedish):
+If you set this option and reconnect to the network, and then check your IP on your phone, you will see something weird after a few seconds (pardon the swedish):
 
 ![iPhone-IPv4-CLAT](/iphone-ipv4CLAT2.png)
 
-You see that you've grabbed 2 IPv6 IPs - That's good and well. But your IPv4 address lines will be empty for a few seconds, then they will be populated with a weird IP/Mask and gateway that you haven't set. You haven't set anything, you just turned IPv4 off, didn't you? Yeah, you did. Usually, a client that doesn’t get a DHCP lease within 20-30 seconds will hand itself an APIPA address (169.254.x.x) in order to at least have some address on the local link. But in our case, we actually _did_ get an IPv4 address from the DHCP server, albeight with the option 108 that ordered us to shut down IPv4 at the same time. This is something else. 
+You see that you've grabbed 2 IPv6 IPs - That's good and well. But your IPv4 address lines will be empty for a few seconds, then they will be populated with a weird IP/Mask and gateway that you didn't set. You haven't set anything, you just turned IPv4 off, didn't you? Yeah, you did.  
+Usually, a client that doesn’t get a DHCP lease within 20-30 seconds will hand itself an APIPA address (169.254.x.x) in order to at least have some address on the local link. But in our case, we actually _did_ get an IPv4 address from the DHCP server, albeight with the option 108 that ordered us to shut down IPv4 at the same time. This is something else. 
 
 **CLAT/464XLAT**
 
