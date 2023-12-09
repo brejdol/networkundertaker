@@ -125,42 +125,51 @@ If you set this option and reconnect to the network, and then check your IP on y
 
 ![iPhone-IPv4-CLAT](/iphone-ipv4CLAT2.png)
 
-You see that you've grabbed 2 IPv6 IPs - That's good and well. But your IPv4 address lines will be empty for a few seconds, then they will be populated with a weird IP/mask and gateway that you haven't set. You haven't set anything, you just turned IPv4 off, didn't you? Yeah, you did. Usually, a client that doesn’t get a DHCP lease within 20-30 seconds will hand itself an APIPA address (169.254.x.x) in order to at least have some address on the local link. But in our case, we actually _did_ get an IPv4 address from the DHCP server, albeight with the option 108 that ordered us to shut down IPv4 at the same time. This is something else. 
+You see that you've grabbed 2 IPv6 IPs - That's good and well. But your IPv4 address lines will be empty for a few seconds, then they will be populated with a weird IP/Mask and gateway that you haven't set. You haven't set anything, you just turned IPv4 off, didn't you? Yeah, you did. Usually, a client that doesn’t get a DHCP lease within 20-30 seconds will hand itself an APIPA address (169.254.x.x) in order to at least have some address on the local link. But in our case, we actually _did_ get an IPv4 address from the DHCP server, albeight with the option 108 that ordered us to shut down IPv4 at the same time. This is something else. 
 
 **CLAT/464XLAT**
 
-What you see now is actually the CLAT client doing its magic. This is the _customer-side translator_, locally on your phone. It is stateless NAT46 on the client, whilst NAT64 is stateful. The CLAT in the client together with the PLAT (provider-side translator) which in our case is the NAT64 together provides what is known as 464XLAT.
-The CLAT client is triggered by the fact that there is no working IPv4 address, but there are IPv6 addresses, and a NAT64 prefix exists (signalled via router advertisement containing the PREF64 option, or via the ipv4only.arpa fqdn in DNS). What the CLAT client do when triggered is:
+What you see now is actually the CLAT client doing its magic. This is the _customer-side translator_, locally on your phone. It is doing stateless NAT46. The CLAT in the client together with the PLAT (provider-side translator) which in our case is the NAT64 together provides the translation mechanism know as 464XLAT.  
+The CLAT client is triggered by the absence of a IPv4 address, but IPv6 exists, and there is a NAT64 prefix available (signalled via router advertisement containing the PREF64 option, or via the ipv4only.arpa fqdn in DNS). What the CLAT client does when triggered is:  
 * Set an IP/gw out of the reserved range 192.0.0.0/29
 * Create a "VIP" on the gateway, doing stateless NAT46 --> Interface IPv6 IP.
 * In the other end, the NAT64 setup will reverse this traffic back to IPv4 and send it out SNAT:ed, hence the 464XLAT name of the setup in total.
 
-What does this mean then? Well, it means a fairly updated device (from OSX 13 and iOS 16 and up, Android 4.3, etc) has a means of handling the fact that it _doesn't_ have an IPv4 IP. This functionality is meant for traffic that need a literal IPv4 IP on the phone itself - For example when pinging an IPv4 IP from the phone, or using a legacy app that _only_ can use an IPv4 address (which isn't really gonna happen due to the fact that Apple forced all apps in appstore to support native IPv6 since 2010-ish). Think of it as an automatic NAT46 function within your phone that needs no configuration at all. This means that all the above listed devices will work very well as clients on an IPv6-only network. They will just work as usual. As a regular user, you simply will not notice that you don't really have a "real" IPv4 IP _at all_. The same goes for _all_ client devices that have a CLAT client onboard, heck, even servers will work just fine. You _can_ open an IPv4 connection to an IPv4 address, even though you _don't_ have a "real" IPv4 address. 
-A regular linux client/server doesn't come with a built-in CLAT client, you'll have to install Tundra/Tayga or something similar, and run them in CLAT mode. It's simple enough but it might not scale if you have embedded devices that are hard to handle. But now we're getting to the elephant in the room, and it is a big elephant:
+What does this mean then? Well, it means a fairly updated device (from OSX 13 and iOS 16 and up, Android 4.3+, including Chromebooks, etc) has a means of handling the fact that it _doesn't_ have an IPv4 IP.  
+This functionality is a "helper" for applications that need a literal IPv4 IP on the phone itself - For example when pinging an IPv4 IP from the phone, or using a legacy app that _only_ can use an IPv4 address (which isn't really gonna happen due to the fact that Apple forced all apps in appstore to support native IPv6 since 2010-ish).  
+Think of it as an automatic NAT46 function within your phone that needs no configuration at all. A working CLAT client onboard a device means that it will work very well on an IPv6-only network. It will just work as usual.  
+As a regular user, you simply will not notice that you don't really have a "real" IPv4 IP _at all_. The same goes for _all_ client devices that have a CLAT client onboard, heck, even servers will work just fine. You _can_ open an IPv4 connection to an IPv4 address, even though you _don't_ have a "real" IPv4 address.  
+A regular linux client/server doesn't come with a built-in CLAT client, you'll have to install Tundra/Tayga or something similar, and run them in CLAT mode.  
+It's simple enough but it might not scale if you have embedded devices that are hard to handle. But now we're getting to the elephant in the room, and it is a big elephant:  
 
-The Windows suite of operating systems doesn't have a working implementation of CLAT that can be used on wired/wireless interfaces as of today (dec. 2023). I don't know of any tools that can fix this either. To be honest I haven't checked for 3rd party tools for this, since this _should_ be handled in the OS in my opinion. The irony in this is that Windows actually _has_ a CLAT client, but it can as far as I understand it only be used on WWAN type interfaces. This is pretty unfortunate given the amount of Windows clients/servers that are out there. As of now, there is nothing else to do but wait for this to be enabled by default on windows. Or at least give us an ON/OFF button for it? When this finds its way into windows, we're talking. But back to our pale blue friend Joe. How is he doing?
+The Windows suite of operating systems doesn't have a working implementation of CLAT that can be used on wired/wireless interfaces as of today (dec. 2023). I don't know of any tools that can fix this either. To be honest I haven't checked for 3rd party tools for this, since this _should_ be handled in the OS in my opinion. The irony in this is that Windows actually _has_ a CLAT client, but it can as far as I understand it only be used on WWAN type interfaces.  
+This is pretty unfortunate given the amount of Windows clients/servers that are out there. As of now, there is nothing else to do but wait for this to be enabled by default on windows. Or at least give us an ON/OFF button for it? When this finds its way into windows, we're talking. But back to our pale blue friend Joe. How is he doing?  
 
-He's doing alright, but his arm is swollen, and his back hurts. He hasn't noticed any difference in how his phone works.
+He's doing alright, but his arm is swollen, and his back hurts. He hasn't noticed any difference in how his phone works, even though he is on an IPv6-only network:
 
 ![Joe-CLAT](/joe-CLAT.png)
 
 **Conclusion**
 
-It is here, the cell providers already use it, you can use it too. IPv6-only networks that is. Totally up to you if it is worth it, or even interesting. But take note, change is coming: I myself have clients with branch offices in Asia that will lose their IPv4 connectivity during 2024. Yes, this is true, ISP:s in primarily China and India is actually dropping IPv4 totally, not even "just" raising prices. If you want IPv4 connectivity there, you'll have to tunnel over IPv6. Regardless of your own feelings regarding IPv6 - It is here to stay, you will have to deal with it sooner or later. Be the master of your own fate. Besides that, it's actually fun.
+It is here, the cell providers already use it, you can use it too. IPv6-only networks that is. Totally up to you if it is worth it, or even interesting. But take note, change is coming:  
+I myself have clients with branch offices in Asia that will lose their IPv4 connectivity during 2024. Yes, this is true, ISP:s in primarily China and India is actually dropping IPv4 totally, not even "just" raising prices. If you want IPv4 connectivity there, you'll have to tunnel over IPv6.  
+Regardless of your own feelings regarding IPv6 - It is here to stay, you will have to deal with it sooner or later. Be the master of your own fate. Besides that, it's actually fun.  
 
 **Nifty Links if you want to know more:**
 
-The only book you need to have regarding IPv6 addressing: https://www.amazon.com/IPv6-Address-Planning-Designing-Future/dp/1491902760
+[The only book you need to have regarding IPv6 addressing] (https://www.amazon.com/IPv6-Address-Planning-Designing-Future/dp/1491902760)  
 
-Check out IPv6 Buzz over at Packet Pushers. It is an amazing podcast featuring Tom Coffeen (the author of the book above), Scott Hogg, and Ed Horley - Three of the most knowledgeable people in the world regarding IPv6. There is a brand new episode that is all about exactly the above, check it out: https://packetpushers.net/podcast/ipb140-ipv6-clat-and-ipv6-only-networks/
+Check out IPv6 Buzz over at Packet Pushers. It is an amazing podcast featuring Tom Coffeen (the author of the book above),  
+Scott Hogg, and Ed Horley - Three of the most knowledgeable people in the world regarding IPv6.  
+There is a brand new episode that is all about exactly the above, check it out: [IPv6 CLAT and IPv6-only networks] (https://packetpushers.net/podcast/ipb140-ipv6-clat-and-ipv6-only-networks/)  
 
-NAT64/DNS64 in a Fortigate: https://docs.fortinet.com/document/fortigate/7.4.1/administration-guide/443324/nat64-policy-and-dns64-dns-proxy
+[NAT64/DNS64 in a Fortigate] (https://docs.fortinet.com/document/fortigate/7.4.1/administration-guide/443324/nat64-policy-and-dns64-dns-proxy)  
 
-464XLAT: https://tools.ietf.org/html/rfc6877
-https://datatracker.ietf.org/doc/html/rfc8683
-https://www.apnic.net/wp-content/uploads/2017/01/IPv6_Migration_Strategies_for_Mobile_Networks_Whitepaper.pdf
-ipv4only.arpa: https://www.rfc-editor.org/info/rfc7050
-PREF64: https://datatracker.ietf.org/doc/html/rfc8781
-Deploying IPv6-only networks: https://labs.ripe.net/author/ondrej_caletka_1/deploying-ipv6-mostly-access-networks/
+[464XLAT] (https://tools.ietf.org/html/rfc6877]  
+[NAT64/DNS64 deployment] (https://datatracker.ietf.org/doc/html/rfc8683)
+[Migration strategies for Mobile Networks] (https://www.apnic.net/wp-content/uploads/2017/01/IPv6_Migration_Strategies_for_Mobile_Networks_Whitepaper.pdf)
+[ipv4only.arpa] (https://www.rfc-editor.org/info/rfc7050)
+[PREF64] (https://datatracker.ietf.org/doc/html/rfc8781)
+[Deploying IPv6-only networks] (https://labs.ripe.net/author/ondrej_caletka_1/deploying-ipv6-mostly-access-networks/)
 
 [Start page]({{ '/' | absolute_url }})
