@@ -100,7 +100,7 @@ This turns the whole setup _ON_:
 
 ![Enable-DNS64](/enable-dns64.png)
 
-If you enable "always-synthesize-aaaa-record", the DNS64 proxy will do this for _everything_, regardless of an AAAA record exists or not. This is unnecessary in our setup.
+If you enable "always-synthesize-aaaa-record", the DNS64 proxy will do this for _everything_, i.e: Always create AAAA records and map them to 64:ff9b::/96 regardless of the AAAA record exists or not. I still haven't understood when this is a good idea, so let's leave that one off for now.
 
 You now no longer use IPv4 for anything that has a DNS entry, since the Fortigate will generate AAAA-records out of the A-records and then map that AAAA to a 64:ff9b::xxxx address, and then do NAT64 on that traffic on the way out. 
 
