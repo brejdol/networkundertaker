@@ -26,7 +26,7 @@ A more apt question might be:
 
 _Is this where we want to stay with our addressing forever?_
 
-It sure seems that way, at least sometimes. But what if it's possible to do it the opposite way - Where IPv6 is the new default, end to end connectivity is the norm, and IPv4 is the oddity, the exception, the old address space you’ll translate _to_ when needed? 
+It sure seems that way, at least sometimes. But what if it's possible to do it the opposite way - Where IPv6 is the new default, end to end connectivity is the norm. Where IPv4 is the oddity, the exception, the old address space you’ll translate _to_ when needed? 
 
 Where IPv4 really _is_ legacy IP, there as a reminder of the errors made by an earlier generation that couldn't count high enough. 
 It is _very_ possible to get there, today even.
