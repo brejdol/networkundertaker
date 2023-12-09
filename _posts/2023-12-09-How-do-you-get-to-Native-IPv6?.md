@@ -35,7 +35,7 @@ It is _very_ possible to get there, today even. Bear with me.
 
 Ok, let’s say you accepted your fate as a person in networking - You understand that IPv6 eventually will be of importance, so you learn how it works. You learn to count and make sense of hextets instead of octets. You see that everything (almost) works very much like v4 regarding routing. (”Nice, I totally get this!”) All the crazy stuff seems to happen on the local link (”Hey why on earth do I have like three different addresses on the same interface?!”). 
 
-Fast-forward a couple of years. You now know your stuff. You can walk the walk, and talk the talk.  You can subnet into /63 and /71 without missing a beat, and you understand why you never should. Hurricane Electric thinks you are an IPv6 Sage. You test stuff. You do mistakes, and you fix them. You make certain observations regarding IPv6:
+Fast-forward a couple of years. You now know your stuff. You can walk the walk, and talk the talk.  You can subnet into /63 and /71 without missing a beat, and you understand why you never should. Hurricane Electric thinks you are an IPv6 Sage, but you don't believe them. You test stuff. You do mistakes, and you fix them. You make certain observations regarding IPv6:
 
 * You finally have all the addresses you will need for the forseeable future.
 * End-to-end connectivity means your pipes are ... straighter? It sure feels that way at least.
