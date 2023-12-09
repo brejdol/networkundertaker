@@ -114,9 +114,10 @@ As you see, I did turn off IPv4 for 4,294,967,296 seconds. Because I could. Any 
 
 ```
 !!!
-Make a memory note of the importance of blocking dhcp acks/servers on client-facing ports.
-Option 108 is great way to DoS an IPv4 network without anyone understanding what happens.  
-You would have to use Wireshark in order to actually _see_ the option being set.
+Make a memory note of the importance of always blocking dhcp acks/servers on client-facing ports.
+Option 108 is great way to DoS an IPv4 network without anyone understanding what happens. 
+Clients will not renew their IPs unless network is restarted on them. 
+You would have to use Wireshark in order to actually _see_ the option at play.
 !!!
 ```
 
