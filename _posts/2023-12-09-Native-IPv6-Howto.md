@@ -138,3 +138,4 @@ ipv4only.arpa: https://www.rfc-editor.org/info/rfc7050
 PREF64: https://datatracker.ietf.org/doc/html/rfc8781
 Deploying IPv6-only networks: https://labs.ripe.net/author/ondrej_caletka_1/deploying-ipv6-mostly-access-networks/
 
+[Start page]({{ '/' | absolute_url }})
