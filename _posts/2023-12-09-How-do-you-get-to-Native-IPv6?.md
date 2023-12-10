@@ -169,7 +169,8 @@ He's doing alright, but his arm is swollen, and his back hurts. He hasn't notice
 
 **Conclusion**
 
-It is here, the cell providers already use it, you can use it too. IPv6-only networks that is. Totally up to you if it is worth it, or even interesting for your specific case. But take note, change is coming:  
+It is here, the cell providers already use it, you can use it too. IPv6-only networks that is. T-Mobile has some 120 million users on IPv6-only in the US, using CLAT/PLAT (464XLAT) at a massive scale.  
+It is totally up to you if it is worth it, or even interesting for your specific case. But take note, change is coming:  
 
 I myself have clients with branch offices in Asia that will lose their IPv4 connectivity during 2024. Yes, this is true, ISP:s in primarily China and India is actually dropping IPv4 to their paying customers.  
 If you want IPv4 connectivity there, you'll have to tunnel over IPv6.  
