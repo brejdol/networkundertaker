@@ -192,7 +192,8 @@ There is a brand new episode that is all about exactly the above, check it out:
 Another IPv6 Buzz show, with the fellow Swede Stephan Lagerholm from T-Mobile:  
 [IPv6 and mobile network operators](https://packetpushers.net/podcast/ipv6-buzz-004-ipv6-mobile-network-operators/)  
 
-The _only_ book you need regarding IPv6 addressing: [_IPv6 Address Planning_, by Tom Coffeen](https://www.amazon.com/IPv6-Address-Planning-Designing-Future/dp/1491902760)  
+The _only_ book you need regarding IPv6 addressing:  
+[_IPv6 Address Planning_, by Tom Coffeen](https://www.amazon.com/IPv6-Address-Planning-Designing-Future/dp/1491902760)  
 
 [NAT64/DNS64 in a Fortigate](https://docs.fortinet.com/document/fortigate/7.4.1/administration-guide/443324/nat64-policy-and-dns64-dns-proxy)  
 
