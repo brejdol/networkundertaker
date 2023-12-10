@@ -190,7 +190,7 @@ Check out IPv6 Buzz over at Packet Pushers. It is an amazing podcast featuring T
 There is a brand new episode that is all about exactly the above, check it out:  
 [IPv6 Buzz: IPv6 CLAT and IPv6-only networks](https://packetpushers.net/podcast/ipb140-ipv6-clat-and-ipv6-only-networks/)  
 
-Another IPv6 Buzz show, with the fellow swede Stephan Lagerholm from T-Mobile. A lot of talk about 464XLAT:  
+Another IPv6 Buzz show, with the fellow swede Stephan Lagerholm from T-Mobile, who more or less is the architect behind their IPv6-only deployment. A lot of talk about 464XLAT and tweaking settings:  
 [IPv6 and mobile network operators](https://packetpushers.net/podcast/ipv6-buzz-004-ipv6-mobile-network-operators/)  
 
 The _only_ book you need regarding IPv6 addressing:  
