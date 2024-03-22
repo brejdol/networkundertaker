@@ -7,7 +7,7 @@ ref: about
 order: 0
 ---
 
-__I route, I switch, I overlay, I proxy, I SNAT, I IPv6__
+__I route, I switch, I overlay, I proxy, I IPv6, I break things__
 
 __I lead teams and sometimes I teach__
 
