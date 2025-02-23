@@ -19,7 +19,7 @@ theme: # leave it empty
 author: "Rickard Andrinsson"
 image: /thumbnail-jumbo.png
 twitter:
-  username: Zwonko
+  username: nope
 
 plugins:
   - jekyll-target-blank
