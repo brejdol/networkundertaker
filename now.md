@@ -7,6 +7,6 @@ ref: now
 order: 2
 ---
 
-Currently a bit between bigger assignments, new negotiations are underway. Time to lab, and to test stuff out. And maybe grab another certification or two. 
+Doing full time consulting for a niche networking vendor. And some other cool stuff. 
 
 [Go to the Home Page]({{ '/' | absolute_url }})

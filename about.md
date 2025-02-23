@@ -13,7 +13,7 @@ __I lead teams and sometimes I teach__
 
 __Therefore I am__
 
-50-ish father, husband, former musician and teacher that now dabbles in tech.
+50-ish father, former musician and teacher that now dabbles in tech.
 Talkative. Listening. Very tall. Usually cheerful.
 
 ![Me](/jag.jpg)
